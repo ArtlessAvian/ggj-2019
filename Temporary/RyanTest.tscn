@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Game/LevelElement/Fish.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 328.946, 32.5444 )
 
-[node name="RyanTest" type="Node2D"]
+[node name="RyanTest" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -48,5 +49,9 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
 
 shape = SubResource( 1 )
+
+[node name="Fish" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 225.394, 162.234 )
 
 
