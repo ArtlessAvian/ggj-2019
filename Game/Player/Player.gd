@@ -1,17 +1,32 @@
 extends KinematicBody2D
 
-var grounded = false
 const move_speed = 200
 var gravity = 1000
 var jump_speed = -500
 
+var grounded = false
 var vel = Vector2()
 
+var checkpoint
+var dead = false
+var dead_timer = 0
+
 func _ready():
-	pass
+	checkpoint = self.global_position
 
 func _physics_process(delta):
-	get_input(delta)
+	if dead:
+		dead_timer += delta
+#		print(dead_timer)
+		if (dead_timer >= 1):
+			self.global_position = checkpoint
+			self.grounded = false
+			dead = false
+		if (grounded):
+			vel.x = 0
+	
+	else:
+		get_input(delta)
 	
 	if not grounded:
 		vel.y += gravity * delta
@@ -34,12 +49,7 @@ func get_input(delta):
 		grounded = false
 		vel.y = jump_speed
 
-
-
-
-
-
-
-
-
-
+func on_touch_trap():
+	if (not self.dead):
+		self.dead = true
+		self.dead_timer = 0

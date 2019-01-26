@@ -8,15 +8,17 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32.9301, 32 )
 
-[node name="Trap" type="Area2D"]
+[node name="Trap" type="Area2D" groups=[
+"trap",
+]]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-collision_layer = 524288
-collision_mask = 524288
+collision_layer = 1024
+collision_mask = 0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
@@ -29,5 +31,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_Trap_body_entered"]
 
 
