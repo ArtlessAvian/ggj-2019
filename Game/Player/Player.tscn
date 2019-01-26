@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32.7542, 32.2478 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 position = Vector2( 28.5679, -308.805 )
 input_pickable = false
@@ -28,6 +28,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( -2.42861, 0.306808 )
+scale = Vector2( 0.449161, 0.687563 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
