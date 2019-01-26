@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cat_orange-32x48.png-ceff90b3e7f2bbd01ba349d9b1a6132a.stex"
+path="res://.import/cat_brown-32x48.png-a6822ffe825d994e00311fc58111e39e.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/cat_orange-32x48.png"
-dest_files=[ "res://.import/cat_orange-32x48.png-ceff90b3e7f2bbd01ba349d9b1a6132a.stex" ]
+source_file="res://Assets/Sprites/buncha_cats/cat_brown-32x48.png"
+dest_files=[ "res://.import/cat_brown-32x48.png-a6822ffe825d994e00311fc58111e39e.stex" ]
 
 [params]
 

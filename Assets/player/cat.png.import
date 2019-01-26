@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cat_brown-32x48.png-eda98c3fd27f8beabc3d0a22184c1f56.stex"
+path="res://.import/cat.png-810b84b008c9f0f58f0151e57eab2382.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/cat_brown-32x48.png"
-dest_files=[ "res://.import/cat_brown-32x48.png-eda98c3fd27f8beabc3d0a22184c1f56.stex" ]
+source_file="res://Assets/player/cat.png"
+dest_files=[ "res://.import/cat.png-810b84b008c9f0f58f0151e57eab2382.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
