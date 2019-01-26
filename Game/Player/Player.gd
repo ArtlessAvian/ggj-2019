@@ -13,7 +13,10 @@ func _ready():
 func _physics_process(delta):
 	get_input(delta)
 	
-	if not grounded:
+	if grounded:
+		if not (test_move(self.global_transform, Vector2(0, 1))):
+			grounded = false
+	else:
 		vel.y += gravity * delta
 		if is_on_floor():
 			grounded = true
