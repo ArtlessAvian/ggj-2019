@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/City Background 1.png-ed9f6bb38f9de7156a234d5fdabcc9d5.stex"
+path="res://.import/City Background Dawn-Midday.png-4c2d582c77ba2dd61148afedcb828838.stex"
 
 [deps]
 
-source_file="res://Assets/buildings/City Background 1.png"
-dest_files=[ "res://.import/City Background 1.png-ed9f6bb38f9de7156a234d5fdabcc9d5.stex" ]
+source_file="res://Assets/Backdrops/City Background Dawn-Midday.png"
+dest_files=[ "res://.import/City Background Dawn-Midday.png-4c2d582c77ba2dd61148afedcb828838.stex" ]
 
 [params]
 

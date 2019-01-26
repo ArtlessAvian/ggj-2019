@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.jpg-8dac52bf87f1ff05c45184af0cb48fda.stex"
+path="res://.import/Cage.png-db2009944bf9618e3c83eba6ead43140.stex"
 
 [deps]
 
-source_file="res://Assets/backdrops/2.jpg"
-dest_files=[ "res://.import/2.jpg-8dac52bf87f1ff05c45184af0cb48fda.stex" ]
+source_file="res://Assets/buildings/Cage.png"
+dest_files=[ "res://.import/Cage.png-db2009944bf9618e3c83eba6ead43140.stex" ]
 
 [params]
 
