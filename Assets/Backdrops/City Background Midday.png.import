@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/5.jpg-b31df3bfe462fdc1f6e5fa7716504f6e.stex"
+path="res://.import/City Background Midday.png-95d9edb7410269a64c4549a08dcc3367.stex"
 
 [deps]
 
-source_file="res://Assets/backdrops/5.jpg"
-dest_files=[ "res://.import/5.jpg-b31df3bfe462fdc1f6e5fa7716504f6e.stex" ]
+source_file="res://Assets/Backdrops/City Background Midday.png"
+dest_files=[ "res://.import/City Background Midday.png-95d9edb7410269a64c4549a08dcc3367.stex" ]
 
 [params]
 
