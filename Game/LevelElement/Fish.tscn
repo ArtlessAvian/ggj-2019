@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0.1, 0.1 ), Vector2( -0.1, 0.1 ), Vector2( 0.1, 0.1 ), Vector2( 1e-005, 0.1 ) ]
 }
 
-[node name="Fish" type="Area2D"]
+[node name="Fish" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -58,5 +58,7 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/collected = SubResource( 2 )
 blend_times = [  ]
+
+[connection signal="body_entered" from="." to="." method="_on_Fish_body_entered"]
 
 

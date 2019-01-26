@@ -4,5 +4,5 @@ var collected = false
 
 
 func _on_Fish_body_entered(body):
-	$AnimationPlayer.play("collect")
-	taken = true
+	$AnimationPlayer.play("collected")
+	collected = true
