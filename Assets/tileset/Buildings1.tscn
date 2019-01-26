@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/buildings/City Buildings Block 2.png" type="Texture" id=1]
 
@@ -36,6 +36,36 @@ extents = Vector2( 10, 10 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 16.6203 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 19.1177, 10 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="Buildings Tileset" type="Node2D" index="0"]
 
@@ -133,7 +163,8 @@ shape = SubResource( 2 )
 
 [node name="Pops!" type="Sprite" parent="." index="2"]
 
-position = Vector2( 203, 23 )
+editor/display_folded = true
+position = Vector2( 208, 23 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 1008, 128, 208, 112 )
@@ -312,7 +343,7 @@ shape = SubResource( 6 )
 [node name="Burgr Land" type="Sprite" parent="." index="6"]
 
 editor/display_folded = true
-position = Vector2( 705.605, 38.2572 )
+position = Vector2( 725, 34 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 1216, 160, 128, 80 )
@@ -348,5 +379,173 @@ shape = SubResource( 7 )
 position = Vector2( -2.23649, -21.5471 )
 scale = Vector2( 4.92115, 0.201624 )
 shape = SubResource( 7 )
+
+[node name="Railing 1" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( -287, 191 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 16, 80, 16 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Railing 1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Railing 1/StaticBody2D" index="0"]
+
+position = Vector2( -1.50001, 2.5 )
+scale = Vector2( 3.80769, 0.499999 )
+shape = SubResource( 8 )
+
+[node name="Railing 2" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( -149, 187 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 752, 80, 64, 16 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Railing 2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Railing 2/StaticBody2D" index="0"]
+
+position = Vector2( 1.5, 1.99999 )
+scale = Vector2( 2.73077, 0.538461 )
+shape = SubResource( 9 )
+
+[node name="Open Door 1" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( -45, 176 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 784, 32, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Open Door 1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Open Door 1/StaticBody2D" index="0"]
+
+position = Vector2( -1.5, -3.21865e-006 )
+scale = Vector2( 0.961538, 1.53846 )
+shape = SubResource( 10 )
+
+[node name="Open Door 2" type="Sprite" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 27, 176 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 96, 32, 32 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Open Door 2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Open Door 2/StaticBody2D" index="0"]
+
+position = Vector2( 5.98077, -3.21865e-006 )
+scale = Vector2( 0.496471, 1.53846 )
+shape = SubResource( 11 )
+
+[node name="Cable Car" type="Sprite" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 248, 179 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1680, 192, 128, 64 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cable Car" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cable Car/StaticBody2D" index="0"]
+
+position = Vector2( 5.50001, -11 )
+scale = Vector2( 4.88462, 0.307692 )
+shape = SubResource( 12 )
+
+[node name="Train Station" type="Sprite" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 112, 183 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1504, 176, 128, 64 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Train Station" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Train Station/StaticBody2D" index="0"]
+
+position = Vector2( 0.999999, 27.5 )
+scale = Vector2( 6.46154, 0.423077 )
+shape = SubResource( 13 )
 
 
