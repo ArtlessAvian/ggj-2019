@@ -133,11 +133,10 @@ shape = SubResource( 2 )
 
 [node name="Pops!" type="Sprite" parent="." index="2"]
 
-editor/display_folded = true
-position = Vector2( 204.616, 13.0296 )
+position = Vector2( 203, 23 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 1008, 128, 208, 128 )
+region_rect = Rect2( 1008, 128, 208, 112 )
 _sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_group_": true
