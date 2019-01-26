@@ -6,11 +6,11 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32.7542, 32.2478 )
+extents = Vector2( 17.0412, 21.8048 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
-position = Vector2( 28.5679, -308.805 )
+position = Vector2( 26.1323, -309.269 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

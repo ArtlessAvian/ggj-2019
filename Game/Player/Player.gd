@@ -17,6 +17,9 @@ func _physics_process(delta):
 
 func get_input(delta):
 	
+	if is_on_floor():
+		vel.y = 0
+	
 	if Input.is_action_pressed("ui_left"):
 		vel.x = -move_speed
 	elif Input.is_action_pressed("ui_right"):
