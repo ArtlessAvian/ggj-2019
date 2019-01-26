@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 const move_speed = 200
+const move_acc = 6000
 var gravity = 1000
 var jump_speed = -500
 
@@ -28,27 +29,46 @@ func _physics_process(delta):
 	else:
 		get_input(delta)
 	
+	vel.x = clamp(vel.x, -move_speed, move_speed)
+	
 	if grounded:
 		if not (test_move(self.global_transform, Vector2(0, 1))):
 			grounded = false
-	else:
+		
+		# Animation is probably walking
+		$AnimationPlayer.advance(abs(vel.x) / 1000) # whee magic numbers
+		
+	else:		
 		vel.y += gravity * delta
 		if is_on_floor():
 			grounded = true
+			$AnimationPlayer.play("Walk")
 			vel.y = 0
 	
+		# Animation is probably jumping
+		# Lol do it manually
+		$Sprite.frame = clamp(round(vel.y / 300), -1, 1) + 5
+	
 	self.move_and_slide(vel, Vector2(0, -1))
+	if (vel.x != 0):
+		$Sprite.flip_h = vel.x < 0
 
 func get_input(delta):
 	
+	if ((Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right")) and grounded):
+		$AnimationPlayer.play("Walk")
+	
 	if Input.is_action_pressed("ui_left"):
-		vel.x = -move_speed
+		vel.x -= move_acc * delta
 	elif Input.is_action_pressed("ui_right"):
-		vel.x = move_speed
+		vel.x += move_acc * delta
 	else:
-		vel.x = 0
+		if (grounded and $AnimationPlayer.assigned_animation != "Stand"):
+			$AnimationPlayer.play("Stand")
+		vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/10)
 	
 	if Input.is_action_just_pressed("ui_jump") and grounded:
+		$AnimationPlayer.play("Jump")
 		grounded = false
 		vel.y = jump_speed
 
