@@ -59,4 +59,6 @@ playback_speed = 1.0
 anims/collected = SubResource( 2 )
 blend_times = [  ]
 
+[connection signal="body_entered" from="." to="." method="_on_Fish_body_entered"]
+
 
