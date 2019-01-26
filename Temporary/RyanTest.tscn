@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://Assets/buildings/City Buildings Block.png" type="Texture" id=2]
+[ext_resource path="res://Assets/buildings/CITY_MEGA.png" type="Texture" id=2]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/LevelElement/Fish.tscn" type="PackedScene" id=4]
 
@@ -13,7 +13,7 @@ extents = Vector2( 328.946, 32.5444 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10.3907, 10 )
+extents = Vector2( 10.3406, 10 )
 
 [node name="RyanTest" type="Node2D" index="0"]
 
@@ -81,8 +81,8 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2" index="1"]
 
-position = Vector2( -23.5363, 275.231 )
-scale = Vector2( 151.119, 1.01219 )
+position = Vector2( -27.9376, 145.758 )
+scale = Vector2( 77.3566, 1.01219 )
 shape = SubResource( 2 )
 
 [node name="Player" parent="." index="2" instance=ExtResource( 3 )]
