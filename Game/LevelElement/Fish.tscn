@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0.1, 0.1 ), Vector2( -0.1, 0.1 ), Vector2( 0.1, 0.1 ), Vector2( 1e-005, 0.1 ) ]
 }
 
-[node name="Fish" type="Area2D" index="0"]
+[node name="Fish" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -37,6 +37,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="Fish_sprite" type="Sprite" parent="." index="0"]
 
