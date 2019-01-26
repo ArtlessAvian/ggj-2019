@@ -16,6 +16,9 @@ func _ready():
 	checkpoint = self.global_position
 
 func _physics_process(delta):
+	if ($AnimationPlayer.current_animation == "Fish GET"):
+		return
+	
 	if dead:
 		dead_timer += delta
 #		print(dead_timer)
@@ -83,3 +86,6 @@ func on_touch_trap():
 	if (not self.dead):
 		self.dead = true
 		self.dead_timer = 0
+
+func on_touch_fish():
+	$AnimationPlayer.play("Fish GET")

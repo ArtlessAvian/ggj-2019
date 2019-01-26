@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Game/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/player/cat.png" type="Texture" id=2]
@@ -7,6 +7,13 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 18, 16 )
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "Fish GET"
+length = 2.0
+loop = false
+step = 0.1
 
 [sub_resource type="Animation" id=4]
 
@@ -53,7 +60,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 1 ]
 }
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -71,7 +78,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 vframes = 3
 hframes = 4
-frame = 3
+frame = 1
 region_rect = Rect2( 128, 0, 128, 32 )
 _sections_unfolded = [ "Animation", "Region", "Transform" ]
 
@@ -114,6 +121,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
+"anims/Fish GET" = SubResource( 5 )
 anims/Jump = SubResource( 4 )
 anims/Stand = SubResource( 2 )
 anims/Walk = SubResource( 3 )
