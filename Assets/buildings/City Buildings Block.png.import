@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CITY_MEGA.png-e954b878b5ec66097257a6dd7ae7c79e.stex"
+path="res://.import/City Buildings Block.png-63965545cef5788900af34c2dfbcf756.stex"
 
 [deps]
 
-source_file="res://Assets/buildings/CITY_MEGA.png"
-dest_files=[ "res://.import/CITY_MEGA.png-e954b878b5ec66097257a6dd7ae7c79e.stex" ]
+source_file="res://Assets/buildings/City Buildings Block.png"
+dest_files=[ "res://.import/City Buildings Block.png-63965545cef5788900af34c2dfbcf756.stex" ]
 
 [params]
 
