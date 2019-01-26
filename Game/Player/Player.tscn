@@ -10,6 +10,7 @@ extents = Vector2( 6.91982, 18.3245 )
 
 [node name="Player" type="KinematicBody2D"]
 
+position = Vector2( 0, -1.6702 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
