@@ -1,0 +1,136 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/tileset/InsideTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/buildings/City Buildings Block 2.png" type="Texture" id=2]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=3]
+
+[node name="Level2" type="Node2D" index="0"]
+
+position = Vector2( 128, -768 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BackWall" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -589816, 29, 0, -589815, 29, 0, -589814, 29, 0, -589813, 29, 0, -589812, 29, 0, -589811, 29, 0, -589810, 29, 0, -589808, 29, 0, -589807, 29, 0, -589806, 29, 0, -589805, 29, 0, -589804, 29, 0, -458744, 29, 0, -458743, 29, 0, -458742, 29, 0, -458741, 29, 0, -458740, 29, 0, -458739, 29, 0, -458738, 29, 0, -458737, 29, 0, -458736, 29, 0, -458734, 29, 0, -458733, 29, 0, -458732, 29, 0, -393208, 29, 0, -393207, 29, 0, -393206, 29, 0, -393205, 29, 0, -393204, 29, 0, -393203, 29, 0, -393200, 29, 0, -393199, 29, 0, -393198, 29, 0, -393197, 29, 0, -393196, 29, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="SideWall" type="TileMap" parent="." index="1"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Floor" type="TileMap" parent="." index="2"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -589816, 46, 0, -589814, 46, 0, -589813, 46, 0, -589812, 46, 0, -589811, 46, 0, -589810, 46, 0, -589809, 46, 0, -589808, 46, 0, -589806, 46, 0, -589805, 46, 0, -589804, 46, 0, -196610, 46, 0, -196609, 46, 0, -262144, 46, 0, -262143, 46, 0, -262142, 46, 0, -262141, 46, 0, -262140, 46, 0, -262139, 46, 0, -262138, 46, 0, -262137, 46, 0, -262136, 46, 0, -262135, 46, 0, -262134, 46, 0, -262133, 46, 0, -262132, 46, 0, -262131, 46, 0, -262130, 46, 0, -262128, 46, 0, -262127, 46, 0, -262126, 46, 0, -262125, 46, 0, -262124, 46, 0, 851966, 46, 0, 851967, 46, 0, 786432, 46, 0, 786433, 46, 0, 786434, 46, 0, 786435, 46, 0, 786436, 46, 0, 786437, 46, 0, 786438, 46, 0, 786440, 46, 0, 786441, 46, 0, 786442, 46, 0, 786443, 46, 0, 786444, 46, 0, 786445, 46, 0, 786446, 46, 0, 786447, 46, 0, 786448, 46, 0, 786449, 46, 0, 786450, 46, 0, 786451, 46, 0, 786452, 46, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Furniture" type="TileMap" parent="." index="3"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -983016, 12, 0, -983006, 13, 0, -786402, 14, 0, -786392, 24, 0, -720868, 18, 0, -655340, 11, 0, -655322, 23, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Door" type="Sprite" parent="." index="4"]
+
+visible = false
+position = Vector2( 642, 668 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 330, 90, 20, 40 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="Player" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 20, -380 )
+
+[node name="Front" type="TileMap" parent="." index="6"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -786437, 42, 0, -851967, 42, 0, -851961, 42, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+
