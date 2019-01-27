@@ -15,14 +15,9 @@ func _ready():
 #	pass
 
 
-func _on_StartButton_pressed():
-	#get_tree().change_scene(
-	pass # replace with function body
+func _on_MenuButton_pressed():
+	get_tree().change_scene("res://level/MainMenu.tscn")
 
 
-func _on_QuitButton_pressed():
-	get_tree().quit()
-
-
-func _on_CreditsButton_pressed():
-	get_tree().change_scene("res://level/Credits1.tscn")
+func _on_NextPageButton_pressed():
+	get_tree().change_scene("res://level/Credits2.tscn")
