@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Backdrops/City Background Dusk.png" type="Texture" id=1]
 [ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/tileset/Harbor Tileset Complete.tres" type="TileSet" id=5]
 [ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=6]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Sprites/cat_mom.png" type="Texture" id=8]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -105,7 +106,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131073, 4, 0, 65488, 0, 0, 65489, 0, 0, 65490, 0, 0, 65491, 0, 0, 65492, 0, 0, 65493, 0, 0, 65494, 0, 0, 65495, 0, 0, 65496, 0, 0, 65497, 0, 0, 65498, 0, 0, 65499, 0, 0, 65500, 0, 0, 65501, 0, 0, 65502, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65508, 0, 0, 65509, 0, 0, 65510, 0, 0, 65511, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 2, 0, 65528, 1, 0, 65532, 1, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0 )
+tile_data = PoolIntArray( -131073, 4, 0, 65480, 0, 0, 65481, 0, 0, 65482, 0, 0, 65483, 0, 0, 65484, 0, 0, 65485, 0, 0, 65486, 0, 0, 65487, 0, 0, 65488, 0, 0, 65489, 0, 0, 65490, 0, 0, 65491, 0, 0, 65492, 0, 0, 65493, 0, 0, 65494, 0, 0, 65495, 0, 0, 65496, 0, 0, 65497, 0, 0, 65498, 0, 0, 65499, 0, 0, 65500, 0, 0, 65501, 0, 0, 65502, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65508, 0, 0, 65509, 0, 0, 65510, 0, 0, 65511, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 2, 0, 65528, 1, 0, 65532, 1, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Harbor" type="TileMap" parent="." index="4"]
@@ -151,16 +152,23 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -393215, 2, 0, -262144, 5, 0, -131119, 7, 0, -131117, 7, 0, -131115, 7, 0, -131107, 9, 0, -131100, 7, 0, -131097, 9, 0, -131092, 7, 0, -131089, 8, 0, -131085, 7, 0, -65537, 1, 0, -37, 10, 0, -33, 0, 0, -23, 0, 0, -22, 10, 0, -10, 10, 0, -4, 0, 0, -2, 0, 0, 65491, 0, 0, 65501, 0, 0, 65508, 0, 0, 65510, 0, 0, 65516, 0, 0, 65521, 0, 0 )
+tile_data = PoolIntArray( -393215, 2, 0, -262144, 5, 0, -131128, 7, 0, -131126, 7, 0, -131122, 7, 0, -131119, 7, 0, -131117, 7, 0, -131115, 7, 0, -131107, 9, 0, -131100, 7, 0, -131097, 9, 0, -131092, 7, 0, -131089, 8, 0, -131085, 7, 0, -65537, 1, 0, -37, 10, 0, -33, 0, 0, -23, 0, 0, -22, 10, 0, -10, 10, 0, -4, 0, 0, -2, 0, 0, 65491, 0, 0, 65501, 0, 0, 65508, 0, 0, 65510, 0, 0, 65516, 0, 0, 65521, 0, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="6"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Player" parent="Sprite" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( -310, -90 )
 _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+
+[node name="Cat mom" type="Sprite" parent="." index="7"]
+
+position = Vector2( -2720, -80 )
+scale = Vector2( 0.203336, 0.203336 )
+texture = ExtResource( 8 )
 
 
