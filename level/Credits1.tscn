@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Font types/button_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Assets/Backdrops/City Background Dusk.png" type="Texture" id=5]
 
-[node name="Credits1" type="MarginContainer" index="0"]
+[node name="Credits1" type="MarginContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
