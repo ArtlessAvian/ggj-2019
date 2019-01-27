@@ -7,7 +7,7 @@
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/tileset/Harbor Tileset Complete.tres" type="TileSet" id=6]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="City Background Dusk" type="Sprite" parent="." index="0"]
 
