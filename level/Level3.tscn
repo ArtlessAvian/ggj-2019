@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/Backdrops/City Background Midday.png" type="Texture" id=1]
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=2]
@@ -13,11 +13,17 @@
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Game/LevelElement/Crate.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Game/Dog/Dog.tscn" type="PackedScene" id=13]
+[ext_resource path="res://level/ToLevel4.gd" type="Script" id=14]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 65.6971 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 80, 90 )
 
 [node name="Level3" type="Node2D" index="0"]
 
@@ -487,6 +493,8 @@ position = Vector2( -72, -152 )
 
 [node name="boxes" type="Node2D" parent="." index="11"]
 
+editor/display_folded = true
+
 [node name="Crate" parent="boxes" index="0" instance=ExtResource( 12 )]
 
 position = Vector2( 2524, -524 )
@@ -524,13 +532,31 @@ bounce = 0.0
 
 position = Vector2( -200, -408 )
 scale = Vector2( 1, 14.3462 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWall" index="1"]
 
 position = Vector2( 7816, -548 )
 scale = Vector2( 1, 14.3462 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
+
+[node name="ToLevel4" type="Area2D" parent="." index="14"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToLevel4" index="0"]
+
+position = Vector2( 6560, -156 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="ToLevel4" to="ToLevel4" method="_on_ToLevel4_body_entered"]
 
 

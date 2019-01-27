@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Game/Trap/GenericTrap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Backdrops/SHIPPING_DOCKS_AREA.png" type="Texture" id=2]
@@ -14,16 +14,23 @@
 [ext_resource path="res://Game/LevelElement/Crate.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Game/Dog/Dog.tscn" type="PackedScene" id=14]
+[ext_resource path="res://level/ToLevel1-Dusk.gd" type="Script" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 100 )
 
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.94202, 10 )
+
 [node name="Node2D" type="Node2D" index="0"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( -819.507, -1286.97 )
 scale = Vector2( 4, 4 )
 input_pickable = false
@@ -43,6 +50,7 @@ shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( -945.814, -464.578 )
 scale = Vector2( 4, 4 )
 input_pickable = false
@@ -298,12 +306,31 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="18" instance=ExtResource( 13 )]
 
-position = Vector2( -86.1136, -487.304 )
+position = Vector2( -20, -130 )
 
 [node name="Dog" parent="." index="19" instance=ExtResource( 14 )]
 
 position = Vector2( 3264, -1568 )
 min_x = -20
 max_x = 3280
+
+[node name="ToLevel1-Dusk" type="Area2D" parent="." index="20"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToLevel1-Dusk" index="0"]
+
+position = Vector2( 8770, -320 )
+scale = Vector2( 7.80288, 25.0577 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="ToLevel1-Dusk" to="ToLevel1-Dusk" method="_on_ToLevel1Dusk_body_entered"]
 
 
