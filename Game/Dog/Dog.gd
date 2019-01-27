@@ -1,106 +1,90 @@
 extends KinematicBody2D
 
-const move_speed = 200
-const move_acc = 6000
-var gravity = 640
-var jump_speed = 400
+const wander_speed = 100
+const move_speed = 300
+const move_acc = 1000
+
+export (int) var min_x = -100
+export (int) var max_x = 100
 
 var grounded = false
 var vel = Vector2()
 
-var checkpoint
-var dead = false
-var dead_timer = 0
-
 func _ready():
-	checkpoint = self.global_position
-	$Camera2D.pre_jump_y = self.position.y
+	move_and_collide(Vector2(0,500))
 
 func _physics_process(delta):
-	if ($AnimationPlayer.current_animation == "Fish GET"):
-		return
-	
-	if dead:
-		dead_timer += delta
-#		print(dead_timer)
-		if (dead_timer >= 1):
-			self.global_position = checkpoint
-			$Camera2D.pre_jump_y = checkpoint.y
-			self.grounded = false
-			dead = false
-			vel *= 0
-		
-		vel.y += 10
-		self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
-		return
-	
-	else:
-		get_input(delta)
+	get_input(delta)
 	
 	vel.x = clamp(vel.x, -move_speed, move_speed)
-	
-	if grounded:
-		if not (test_move(self.global_transform, Vector2(0, 1))):
-			grounded = false
-			
-			$Camera2D.set_pre_jump_y()
-		
-		# Animation is probably walking
-		$AnimationPlayer.advance(abs(vel.x) / 1000) # whee magic numbers
-		
-	else:		
-		if (Input.is_action_pressed("ui_jump") and vel.y < 0):
-			vel.y += gravity * delta
-		else:
-			vel.y += gravity * 3 * delta
-			
-		if is_on_floor():
-			grounded = true
-			$AnimationPlayer.play("Walk")
-			vel.y = 0
-		
-		if is_on_ceiling():
-			vel.y = 0
-	
-		# Animation is probably jumping
-		# Lol do it manually
-		$Sprite.frame = clamp(round(vel.y / jump_speed), -1, 1) + 5
-	
-	self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
+
+	self.move_and_slide(vel, Vector2(0, -1))
+
 	if (vel.x != 0):
-		$Sprite.flip_h = vel.x < 0
+		$dogggggg.flip_h = vel.x < 0
+		
+		if $AnimationPlayer.assigned_animation == "Walk":
+			$AnimationPlayer.advance(abs(vel.x) / 2000) # whee magic numbers
+
+var my_state = "PatrolLeft"
+var timer = 5
 
 func get_input(delta):
-	
-	if ((Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right")) and grounded):
-		$AnimationPlayer.play("Walk")
-	
-	if Input.is_action_pressed("ui_left"):
-		vel.x -= delta * move_acc * self.scale.x
-	elif Input.is_action_pressed("ui_right"):
-		vel.x += delta * move_acc * self.scale.x
-	else:
-		if (grounded and $AnimationPlayer.assigned_animation != "Stand"):
-			$AnimationPlayer.play("Stand")
-		vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/10)
-	
-	if Input.is_action_just_pressed("ui_jump") and grounded:
-		$AnimationPlayer.play("Jump")
-		grounded = false
-		vel.y = -jump_speed
-#		if ($Camera2D.offset.y == 0):
-		$Camera2D.set_pre_jump_y()
-	
+	if (my_state == "PatrolLeft"):
+		if (self.position.x < min_x):
+			my_state = "PatrolRight"
+	elif (my_state == "PatrolRight"):
+		if (self.position.x > max_x):
+			my_state = "PatrolLeft"
+			
+	if timer <= 0:
+		if (my_state == "Bark"):
+			my_state = "Chase"
+	timer -= delta
 
-func on_touch_trap():
-	if (not self.dead):
-		self.dead = true
-		self.dead_timer = 0
-		$AnimationPlayer.play("DONT FEEL SO WELL (HUUUURT)")
-		vel.y = -400
-		vel.x *= -1
-		$Camera2D.set_pre_jump_y()
-		grounded = false
+	if (my_state == "PatrolLeft" or my_state == "PatrolRight"):
+		if $AnimationPlayer.assigned_animation != "Walk":
+			$AnimationPlayer.assigned_animation = "Walk"
+		vel.x = 100 * (-1 if my_state == "PatrolLeft" else 1)
+	elif (my_state == "Bark"):
+		vel.x -= sign(vel.x) * min(abs(vel.x), wander_speed/30)
+	elif (my_state == "Chase"):
+		if $AnimationPlayer.assigned_animation != "Run":
+			$AnimationPlayer.assigned_animation = "Run"
+		vel.x += sign(cat.position.x - self.position.x) * move_acc * delta
+		
 
-func on_touch_fish():
-	$AnimationPlayer.play("Fish GET")
+#	if my_state == "Standing":
+#		
+#	elif my_state == "Wandering":
+#		vel.x += 100 * delta * (-1 if my_state == "WanderingLeft" else 1)
+#		vel.x = clamp(vel.x, -wander_speed, wander_speed)
+#		pass
+#
+#	if Input.is_action_pressed("ui_left"):
+#		vel.x -= delta * move_acc * self.scale.x
+#	elif Input.is_action_pressed("ui_right"):
+#		vel.x += delta * move_acc * self.scale.x
+#	else:
+#		if (grounded and $AnimationPlayer.assigned_animation != "Stand"):
+#			$AnimationPlayer.play("Stand")
+#		vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/10)
+#
+#	if Input.is_action_just_pressed("ui_jump") and grounded:
+#		$AnimationPlayer.play("Jump")
+#		grounded = false
+#		vel.y = -jump_speed
+##		if ($Camera2D.offset.y == 0):
+#		$Camera2D.set_pre_jump_y()
+
+var cat = null
+
+func _on_CatDetector_body_entered(body):
+	my_state = "Bark"
+	timer = 1
+	cat = body
+	$AnimationPlayer.play("Borf")
+
+
+func _on_CatDetector_body_exited(body):
+	my_state = "PatrolRight"

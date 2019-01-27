@@ -3,7 +3,7 @@ extends KinematicBody2D
 const move_speed = 200
 const move_acc = 6000
 var gravity = 640
-var jump_speed = 400
+var jump_speed = 450
 
 var grounded = false
 var vel = Vector2()
