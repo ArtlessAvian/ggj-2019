@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=6]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=7]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
