@@ -16,7 +16,12 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 840 )
 
-[node name="Level2" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 840 )
+
+[node name="Level2" type="Node2D" index="0"]
 
 position = Vector2( 128, -800 )
 _sections_unfolded = [ "Transform" ]
@@ -185,7 +190,6 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="InvisibleWall" type="StaticBody2D" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 2772, 70 )
 input_pickable = false
 collision_layer = 1
@@ -223,7 +227,6 @@ max_x = 1682
 
 [node name="InvisibleWall2" type="StaticBody2D" parent="." index="12"]
 
-editor/display_folded = true
 position = Vector2( 2772, 76 )
 scale = Vector2( 1, 0.8125 )
 input_pickable = false
@@ -241,7 +244,6 @@ shape = SubResource( 1 )
 
 [node name="InvisibleWall3" type="StaticBody2D" parent="." index="13"]
 
-editor/display_folded = true
 position = Vector2( 2772, 76 )
 scale = Vector2( 1, 0.8125 )
 input_pickable = false
@@ -284,7 +286,6 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="ToLevel3" type="Area2D" parent="." index="16"]
 
-editor/display_folded = true
 scale = Vector2( 4, 4 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -312,8 +313,5 @@ pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
-
-position = Vector2( 185, -279 )
-
 
 

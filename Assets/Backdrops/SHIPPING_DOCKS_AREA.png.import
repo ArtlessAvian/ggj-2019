@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SHIPPING_DOCKS_AREA.png-e16ddfa11565baff0024d08a8f49630e.stex"
+path="res://.import/SHIPPING_DOCKS_AREA.png-978d2a04fdb1a8bae3026db72a00fe37.stex"
 
 [deps]
 
-source_file="res://Assets/Backdrops/SHIPPING_DOCKS_AREA.png"
-dest_files=[ "res://.import/SHIPPING_DOCKS_AREA.png-e16ddfa11565baff0024d08a8f49630e.stex" ]
+source_file="res://Assets/backdrops/SHIPPING_DOCKS_AREA.png"
+dest_files=[ "res://.import/SHIPPING_DOCKS_AREA.png-978d2a04fdb1a8bae3026db72a00fe37.stex" ]
 
 [params]
 
@@ -16,11 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-<<<<<<< HEAD
-flags/filter=false
-=======
 flags/filter=true
->>>>>>> 69976f883588d0a314b6007d9b2873bdb39e8ba8
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -29,9 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-<<<<<<< HEAD
-detect_3d=false
-=======
 detect_3d=true
->>>>>>> 69976f883588d0a314b6007d9b2873bdb39e8ba8
 svg/scale=1.0
