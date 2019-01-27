@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=4]
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=5]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Backdrops/City Background Dawn.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Backdrops/City Background Dusk.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -81,7 +81,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -786340, 4, 0, -655294, 1, 0, -589780, 3, 0, -524254, 0, 0, -458683, 10, 0, -393148, 7, 0, -327607, 2, 0, -196583, 5, 0, -196523, 6, 0 )
+tile_data = PoolIntArray( -786340, 4, 0, -655294, 1, 0, -589780, 3, 0, -524254, 0, 0, -393148, 7, 0, -327607, 2, 0, -196583, 5, 0, -196523, 6, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Scenery" type="TileMap" parent="." index="3"]
@@ -172,7 +172,6 @@ shape = SubResource( 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="9"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -192,10 +191,10 @@ motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
 
-[node name="City Background Dawn" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+[node name="City Background Dusk" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
-position = Vector2( 1600, -598 )
-scale = Vector2( 3.75, 3.75 )
+position = Vector2( 2330, -738 )
+scale = Vector2( 4.675, 4.675 )
 texture = ExtResource( 7 )
 
 
