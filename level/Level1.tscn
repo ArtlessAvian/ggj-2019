@@ -1,34 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/tileset/CityTileSet.tres" type="TileSet" id=1]
-[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=2]
+[ext_resource path="res://Assets/tileset/CityTileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://Assets/tileset/PushableTileSet.tres" type="TileSet" id=4]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=5]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
-[node name="TileMap" type="TileMap" parent="." index="0"]
+[node name="Building" type="TileMap" parent="." index="0"]
 
-mode = 0
-tile_set = null
-cell_size = Vector2( 64, 64 )
-cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
-occluder_light_mask = 1
-format = 1
-tile_data = PoolIntArray( 458756, 4, 0 )
-
-[node name="ground" type="TileMap" parent="." index="1"]
-
-position = Vector2( 0, 30 )
-scale = Vector2( 2.5, 2.5 )
+scale = Vector2( 5, 5 )
 mode = 0
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 64, 64 )
@@ -45,10 +27,77 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 262144, 8, 0, 262145, 8, 0, 262146, 8, 0, 262147, 8, 0, 262148, 8, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0 )
+tile_data = PoolIntArray( 65537, 5, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Player" parent="." index="2" instance=ExtResource( 2 )]
+[node name="Box" type="TileMap" parent="." index="1"]
+
+scale = Vector2( 4.5, 4.5 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 458756, 5, 0, 524291, 5, 0, 524292, 5, 0, 589826, 5, 0, 589827, 5, 0, 589828, 5, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="ground" type="TileMap" parent="." index="2"]
+
+position = Vector2( 0, 30 )
+scale = Vector2( 2.65, 2.65 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 262144, 8, 0, 262145, 8, 0, 262146, 8, 0, 262147, 8, 0, 262148, 8, 0, 262149, 8, 0, 262150, 8, 0, 262151, 8, 0, 262152, 8, 0, 262153, 8, 0, 262154, 8, 0, 262155, 8, 0, 262156, 8, 0, 262157, 8, 0, 262158, 8, 0, 262159, 8, 0, 262160, 8, 0, 262161, 8, 0, 262162, 8, 0, 262163, 8, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Pushable" type="TileMap" parent="." index="3"]
+
+scale = Vector2( 5, 5 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = true
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196615, 0, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Transform" ]
+
+[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 41.5399, 531.059 )
 
