@@ -24,8 +24,6 @@ tracks/0/keys = {
 
 [node name="Trap" index="0" instance=ExtResource( 1 )]
 
-editor/display_folded = true
-
 [node name="Sprite" parent="." index="0"]
 
 scale = Vector2( 2, 2 )
