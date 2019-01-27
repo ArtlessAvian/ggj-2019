@@ -4,8 +4,8 @@
 [ext_resource path="res://Assets/tileset/InsideTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=3]
 [ext_resource path="res://Assets/buildings/City Buildings Block 2.png" type="Texture" id=4]
-[ext_resource path="res://Game/Dog/Dog.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=6]
+[ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=5]
+[ext_resource path="res://Game/Dog/Dog.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -144,29 +144,7 @@ region_enabled = true
 region_rect = Rect2( 330, 90, 20, 40 )
 _sections_unfolded = [ "Region", "Transform" ]
 
-[node name="Dogs" type="Node2D" parent="." index="7"]
-
-editor/display_folded = true
-
-[node name="Dog2" parent="Dogs" index="0" instance=ExtResource( 5 )]
-
-position = Vector2( 612, 150 )
-min_x = 492
-max_x = 982
-
-[node name="Dog3" parent="Dogs" index="1" instance=ExtResource( 5 )]
-
-position = Vector2( 462, 660 )
-min_x = 492
-max_x = 982
-
-[node name="Dog4" parent="Dogs" index="2" instance=ExtResource( 5 )]
-
-position = Vector2( 262, 660 )
-min_x = 492
-max_x = 982
-
-[node name="Front" type="TileMap" parent="." index="8"]
+[node name="Front" type="TileMap" parent="." index="7"]
 
 scale = Vector2( 4, 4 )
 mode = 0
@@ -188,7 +166,7 @@ format = 1
 tile_data = PoolIntArray( -786437, 42, 0, -851967, 42, 0, -851961, 42, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="InvisibleWall" type="StaticBody2D" parent="." index="9"]
+[node name="InvisibleWall" type="StaticBody2D" parent="." index="8"]
 
 editor/display_folded = true
 position = Vector2( 2772, 70 )
@@ -204,8 +182,9 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="InvisibleWall2" type="StaticBody2D" parent="." index="10"]
+[node name="InvisibleWall2" type="StaticBody2D" parent="." index="9"]
 
+editor/display_folded = true
 position = Vector2( 2772, 76 )
 scale = Vector2( 1, 0.8125 )
 input_pickable = false
@@ -221,8 +200,9 @@ bounce = 0.0
 position = Vector2( -3860, 103.385 )
 shape = SubResource( 1 )
 
-[node name="InvisibleWall3" type="StaticBody2D" parent="." index="11"]
+[node name="InvisibleWall3" type="StaticBody2D" parent="." index="10"]
 
+editor/display_folded = true
 position = Vector2( 2772, 76 )
 scale = Vector2( 1, 0.8125 )
 input_pickable = false
@@ -238,11 +218,11 @@ bounce = 0.0
 position = Vector2( -2912, -265.846 )
 shape = SubResource( 1 )
 
-[node name="park" type="TileMap" parent="." index="12"]
+[node name="park" type="TileMap" parent="." index="11"]
 
 scale = Vector2( 4, 4 )
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -259,6 +239,26 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -262135, 0, 0, -65527, 0, 0, 196611, 0, 0, 196622, 0, 0, 196632, 0, 0, 393202, 15, 0, 327709, 15, 0, 655345, 9, 0, 655352, 7, 0, 589857, 9, 0, 589864, 8, 0, 786420, 10, 0, 720932, 10, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Dogs" type="Node2D" parent="." index="12"]
+
+[node name="Dog2" parent="Dogs" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 1626, 164 )
+min_x = 169
+max_x = 1626
+
+[node name="Dog3" parent="Dogs" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 1631, 741 )
+min_x = 492
+max_x = 1636
+
+[node name="Dog4" parent="Dogs" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 304, 741 )
+min_x = 492
+max_x = 1630
 
 [node name="Player" parent="." index="13" instance=ExtResource( 7 )]
 
