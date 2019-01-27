@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/City Background Dusk.png-8360c8eafca218169b493aab35415b25.stex"
+path="res://.import/City Background Dusk.png-22ba24d6d5ba3720045855fab4f0af14.stex"
 
 [deps]
 
-source_file="res://Assets/backdrops/City Background Dusk.png"
-dest_files=[ "res://.import/City Background Dusk.png-8360c8eafca218169b493aab35415b25.stex" ]
+source_file="res://Assets/Backdrops/City Background Dusk.png"
+dest_files=[ "res://.import/City Background Dusk.png-22ba24d6d5ba3720045855fab4f0af14.stex" ]
 
 [params]
 
