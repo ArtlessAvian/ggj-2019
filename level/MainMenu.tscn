@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Font types/pixel_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Font types/less_big_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Assets/Font types/button_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/Backdrops/City Background Dawn-Midday.png" type="Texture" id=4]
 
 [node name="MainMenu" type="MarginContainer" index="0"]
 
@@ -41,10 +42,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 388.0
-margin_top = 217.0
-margin_right = 628.0
-margin_bottom = 383.0
+margin_left = 365.0
+margin_top = 175.0
+margin_right = 650.0
+margin_bottom = 425.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -61,8 +62,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 240.0
-margin_bottom = 50.0
+margin_right = 285.0
+margin_bottom = 76.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -70,7 +71,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
-text = "GameName"
+text = "CatFish"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -82,9 +83,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 70.0
-margin_right = 240.0
-margin_bottom = 108.0
+margin_top = 96.0
+margin_right = 285.0
+margin_bottom = 134.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -101,15 +102,41 @@ text = "Start"
 flat = false
 align = 1
 
-[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" index="2"]
+[node name="CreditsButton" type="Button" parent="CenterContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 128.0
-margin_right = 240.0
-margin_bottom = 166.0
+margin_top = 154.0
+margin_right = 285.0
+margin_bottom = 192.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Credits"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 212.0
+margin_right = 285.0
+margin_bottom = 250.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -125,8 +152,19 @@ group = null
 text = "Quit"
 flat = false
 align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="bg_dm" type="Sprite" parent="." index="1"]
+
+show_behind_parent = true
+position = Vector2( 0, 360 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
 
