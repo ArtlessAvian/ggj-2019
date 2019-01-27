@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=1]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=2]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Buildings" type="TileMap" parent="." index="0"]
 
