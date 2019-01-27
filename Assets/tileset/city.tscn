@@ -52,7 +52,7 @@ extents = Vector2( 8, 16 )
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="tileset" type="Node2D" index="0"]
+[node name="tileset" type="Node2D"]
 
 [node name="BigGrassGround" type="Sprite" parent="." index="0"]
 
