@@ -1,56 +1,35 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/backdrops/City Background Midday.png" type="Texture" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Assets/buildings/City Buildings Block 1.png" type="Texture" id=3]
-[ext_resource path="res://Assets/buildings/Cage.png" type="Texture" id=4]
-[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Game/LevelElement/Fish.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Game/Dog/Dog.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Game/LevelElement/Crate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Assets/buildings/City Buildings Block 1.png" type="Texture" id=2]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/LevelElement/Fish.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 328.946, 32.5444 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10.8017, 7.14552 )
+extents = Vector2( 10.3907, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[node name="RyanTest" type="Node2D"]
 
-custom_solver_bias = 0.0
-extents = Vector2( 50.9689, 10 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[node name="RyanTest" type="Node2D" index="0"]
-
-position = Vector2( 0, -300 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="City Background Dawn-Midday" type="Sprite" parent="." index="0"]
+[node name="RigidBody2D" type="RigidBody2D" parent="." index="0"]
 
-position = Vector2( -0.140154, -178.012 )
-scale = Vector2( 1.99927, 2.72332 )
-texture = ExtResource( 1 )
-
-[node name="Support" type="RigidBody2D" parent="." index="1"]
-
-position = Vector2( 174.394, 395.232 )
+position = Vector2( 0, 300 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-mode = 1
+mode = 0
 mass = 1.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 1.0
+gravity_scale = 0.0
 custom_integrator = false
 continuous_cd = 0
 contacts_reported = 0
@@ -61,24 +40,23 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Support" index="0"]
+[node name="Sprite" type="Sprite" parent="RigidBody2D" index="0"]
 
-position = Vector2( -170.773, 16.7697 )
-scale = Vector2( 71.2165, 12.7134 )
+scale = Vector2( 10, 1 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
+
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Support" index="1"]
-
-position = Vector2( -126.245, 11.5162 )
-texture = ExtResource( 2 )
-
-[node name="Buildings" type="RigidBody2D" parent="." index="2"]
+[node name="RigidBody2D2" type="RigidBody2D" parent="." index="1"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-mode = 1
+mode = 0
 mass = 1.0
 friction = 1.0
 bounce = 0.0
@@ -94,206 +72,25 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 
-[node name="Sprite" type="Sprite" parent="Buildings" index="0"]
+[node name="Sprite" type="Sprite" parent="RigidBody2D2" index="0"]
 
 scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2" index="1"]
 
-position = Vector2( -34, 275 )
-scale = Vector2( 151.267, -1.61276 )
+position = Vector2( -23.5363, 275.231 )
+scale = Vector2( 151.119, 1.01219 )
 shape = SubResource( 2 )
 
-[node name="Cage1" type="RigidBody2D" parent="Buildings" index="2"]
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -117.704, 233.682 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Cage1" index="0"]
-
-position = Vector2( -1.41101, 2.44019 )
-scale = Vector2( 0.590487, 2.19136 )
-shape = SubResource( 3 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Sprite" type="Sprite" parent="Buildings/Cage1" index="1"]
-
-position = Vector2( -2.776, 3.42303 )
-scale = Vector2( 2.13713, 2.13713 )
-texture = ExtResource( 4 )
-
-[node name="Cage2" type="RigidBody2D" parent="Buildings" index="3"]
-
-editor/display_folded = true
-position = Vector2( -237.196, 234.093 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Cage2" index="0"]
-
-position = Vector2( -1.41101, 2.44019 )
-scale = Vector2( 0.590487, 2.19136 )
-shape = SubResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Buildings/Cage2" index="1"]
-
-position = Vector2( -2.776, 3.42303 )
-scale = Vector2( 2.13713, 2.13713 )
-texture = ExtResource( 4 )
-
-[node name="Cage3" type="RigidBody2D" parent="Buildings" index="4"]
-
-position = Vector2( -297.918, 234.161 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Cage3" index="0"]
-
-position = Vector2( -1.41101, 2.44019 )
-scale = Vector2( 0.590487, 2.19136 )
-shape = SubResource( 3 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-
-[node name="Sprite" type="Sprite" parent="Buildings/Cage3" index="1"]
-
-position = Vector2( -2.776, 3.42303 )
-scale = Vector2( 2.13713, 2.13713 )
-texture = ExtResource( 4 )
-
-[node name="Cage4" type="RigidBody2D" parent="Buildings" index="5"]
-
-editor/display_folded = true
-position = Vector2( -299.562, 185.054 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/Cage4" index="0"]
-
-position = Vector2( -1.41101, 2.44019 )
-scale = Vector2( 0.590487, 2.19136 )
-shape = SubResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Buildings/Cage4" index="1"]
-
-position = Vector2( -2.23566, 2.88269 )
-scale = Vector2( 2.13713, 2.13713 )
-texture = ExtResource( 4 )
-
-[node name="RigidBody2D" type="RigidBody2D" parent="." index="3"]
-
-position = Vector2( -942.013, 406.427 )
-scale = Vector2( 4.16451, 0.939394 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 1
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="0"]
-
-position = Vector2( -3.32933, -13.1868 )
-scale = Vector2( 2.58723, 2.5533 )
-shape = SubResource( 4 )
-
-[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
-
-position = Vector2( -19, 238 )
+position = Vector2( -13.4418, -11.4649 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
 
-[node name="Fish" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Fish" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 250.394, 163.234 )
-
-[node name="Dog" parent="." index="6" instance=ExtResource( 7 )]
-
-position = Vector2( 858, 237 )
-
-[node name="Crate" parent="." index="7" instance=ExtResource( 8 )]
-
-position = Vector2( -330, -19 )
-
-[node name="Crate2" parent="." index="8" instance=ExtResource( 8 )]
-
-position = Vector2( -294, 54 )
+position = Vector2( 225.394, 162.234 )
 
 
