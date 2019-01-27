@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Backdrops/City Background Dusk.png" type="Texture" id=1]
 [ext_resource path="res://Assets/tileset/Harbor Tileset Complete.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/tileset/Park.tres" type="TileSet" id=3]
-[ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=4]
+[ext_resource path="res://Assets/tileset/Buildings TileSet1 v3.tres" type="TileSet" id=4]
 [ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=5]
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=6]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=7]
@@ -89,7 +89,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -786340, 4, 0, -655294, 1, 0, -589780, 3, 0, -524254, 0, 0, -458684, 10, 0, -393148, 7, 0, -327607, 2, 0, -196583, 5, 0, -196523, 6, 0 )
+tile_data = PoolIntArray( -786340, 4, 0, -655294, 1, 0, -589780, 3, 0, -524254, 0, 0, -458683, 10, 0, -393148, 7, 0, -327607, 2, 0, -196583, 5, 0, -196523, 6, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Scenery" type="TileMap" parent="." index="4"]
