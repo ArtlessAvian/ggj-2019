@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cat_cry.wav-c6f674a852a182744e2925301c5d57ec.sample"
+
+[deps]
+
+source_file="res://Assets/audio/cat_cry.wav"
+dest_files=[ "res://.import/cat_cry.wav-c6f674a852a182744e2925301c5d57ec.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

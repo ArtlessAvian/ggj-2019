@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Game/Dog/Dog.gd" type="Script" id=1]
 [ext_resource path="res://Game/Trap/GenericTrap.gd" type="Script" id=2]
 [ext_resource path="res://Assets/dog2/dogggggg.png" type="Texture" id=3]
+[ext_resource path="res://Assets/audio/barks/0.wav" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -17,10 +18,24 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 7, 3, 7, 3 ]
+"values": [ 7, 3, 7, 3, 7, 3, 7, 3, 7 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("0")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play"
+} ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -121,12 +136,12 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 25, 27 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 20 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 400, 100 )
@@ -208,7 +223,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap" index="0"]
 
 position = Vector2( 6, 3 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CatDetector" type="Area2D" parent="." index="4"]
@@ -227,7 +242,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatDetector" index="0"]
 
 position = Vector2( 0, -70 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="dogggggg" type="Sprite" parent="." index="5"]
@@ -237,7 +252,7 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 vframes = 3
 hframes = 4
-frame = 1
+frame = 7
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 
 [node name="Label" type="Label" parent="." index="6"]
@@ -260,6 +275,17 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = SubResource( 8 )
+
+[node name="0" type="AudioStreamPlayer2D" parent="." index="7"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="body_entered" from="Trap" to="Trap" method="_on_Trap_body_entered"]
 
