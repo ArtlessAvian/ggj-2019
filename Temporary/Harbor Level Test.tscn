@@ -133,7 +133,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="7" instance=ExtResource( 7 )]
 
-position = Vector2( 3516, -1831 )
+position = Vector2( 2453, -1846 )
 
 [node name="Dog" parent="." index="8" instance=ExtResource( 8 )]
 
