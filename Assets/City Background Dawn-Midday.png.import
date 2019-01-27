@@ -1,0 +1,47 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+<<<<<<< HEAD:Assets/City Background Dawn-Midday.png.import
+<<<<<<< HEAD:Assets/City Background Dawn-Midday.png.import
+path="res://.import/City Background Dawn-Midday.png-5413b2016b9c89ba9d5e6b75a6a37052.stex"
+
+[deps]
+
+source_file="res://Assets/City Background Dawn-Midday.png"
+dest_files=[ "res://.import/City Background Dawn-Midday.png-5413b2016b9c89ba9d5e6b75a6a37052.stex" ]
+=======
+path="res://.import/City Background Dawn-Midday.png-5b7c125431326f22b9da668071280cdb.stex"
+
+[deps]
+
+source_file="res://Assets/backdrops/City Background Dawn-Midday.png"
+dest_files=[ "res://.import/City Background Dawn-Midday.png-5b7c125431326f22b9da668071280cdb.stex" ]
+>>>>>>> 8cce7d9071abf661805a5697ee48aed178dffa76:Assets/Backdrops/City Background Dawn-Midday.png.import
+=======
+path="res://.import/City Background Dawn-Midday.png-4c2d582c77ba2dd61148afedcb828838.stex"
+
+[deps]
+
+source_file="res://Assets/Backdrops/City Background Dawn-Midday.png"
+dest_files=[ "res://.import/City Background Dawn-Midday.png-4c2d582c77ba2dd61148afedcb828838.stex" ]
+>>>>>>> 042d22322fbddcbf265b9fc3ccec39ba7c87a66d:Assets/Backdrops/City Background Dawn-Midday.png.import
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
