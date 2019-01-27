@@ -14,7 +14,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 840 )
 
-[node name="Level2" type="Node2D" index="0"]
+[node name="Level2" type="Node2D"]
 
 position = Vector2( 128, -800 )
 _sections_unfolded = [ "Transform" ]
@@ -278,6 +278,5 @@ max_x = 1630
 [node name="Player" parent="." index="15" instance=ExtResource( 8 )]
 
 position = Vector2( 185, -279 )
-collision_mask = 3
 
 
