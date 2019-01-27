@@ -489,7 +489,7 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Player" parent="." index="10" instance=ExtResource( 11 )]
 
-position = Vector2( 30, -96 )
+position = Vector2( -72, -152 )
 
 [node name="boxes" type="Node2D" parent="." index="11"]
 
