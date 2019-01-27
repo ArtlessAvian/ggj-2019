@@ -1,25 +1,31 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Backdrops/City Background Dusk.png" type="Texture" id=1]
-[ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=2]
-[ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=3]
-[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=4]
-[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/tileset/Harbor Tileset Complete.tres" type="TileSet" id=6]
+[ext_resource path="res://Assets/tileset/Harbor Tileset Complete.tres" type="TileSet" id=2]
+[ext_resource path="res://Assets/tileset/Park.tres" type="TileSet" id=3]
+[ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=4]
+[ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=5]
+[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=6]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
 [node name="City Background Dusk" type="Sprite" parent="." index="0"]
 
-position = Vector2( 1500, -190 )
-scale = Vector2( 3, 3 )
+position = Vector2( 2330, -326.581 )
+scale = Vector2( 4.7, 4.86148 )
 texture = ExtResource( 1 )
-offset = Vector2( 0, -46 )
+offset = Vector2( 0, -92 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="Building" type="TileMap" parent="." index="1"]
+[node name="Harbor" type="TileMap" parent="." index="1"]
 
-position = Vector2( 0, -32 )
+position = Vector2( -220, -120 )
 scale = Vector2( 4, 4 )
 mode = 0
 tile_set = ExtResource( 2 )
@@ -37,12 +43,12 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -589780, 3, 0, -524254, 0, 0, -196583, 5, 0 )
+tile_data = PoolIntArray( -327686, 10, 0, -393202, 10, 0, -393162, 10, 0, -131046, 1, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="Scenery" type="TileMap" parent="." index="2"]
+[node name="park" type="TileMap" parent="." index="2"]
 
-position = Vector2( 0, -32 )
+position = Vector2( 0, 5 )
 scale = Vector2( 4, 4 )
 mode = 0
 tile_set = ExtResource( 3 )
@@ -60,12 +66,12 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -589777, 4, 0, -458717, 5, 0, -458712, 4, 0, -327665, 15, 0, -196580, 3, 0, -196572, 1, 0, -196561, 1, 0, -131032, 0, 0, -9, 7, 0, -6, 7, 0, -65523, 9, 0, -65507, 0, 0, -65504, 1, 0, -65478, 14, 0, 65592, 10, 0 )
+tile_data = PoolIntArray( -458677, 3, 0, -458676, 3, 0, -458675, 3, 0, -458674, 3, 0, -458673, 3, 0, -458670, 3, 0, -393185, 3, 0, -131084, 4, 0, -196595, 1, 0, -196565, 1, 0, -196560, 1, 0, -196558, 0, 0, -196540, 1, 0, -196537, 0, 0, -196536, 2, 0, -65558, 3, 0, -65557, 3, 0, -65556, 3, 0, -65555, 3, 0, -65554, 3, 0, -65553, 3, 0, -65552, 3, 0, -65551, 3, 0, -65550, 3, 0, -65549, 3, 0, -65548, 3, 0, -65545, 3, 0, -65542, 3, 0, -65539, 3, 0, -65538, 3, 0, -131072, 3, 0, -131070, 3, 0, -131068, 3, 0, -131066, 3, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="Ground" type="TileMap" parent="." index="3"]
+[node name="Building" type="TileMap" parent="." index="3"]
 
-position = Vector2( -50, 90 )
+position = Vector2( 0, -180 )
 scale = Vector2( 4, 4 )
 mode = 0
 tile_set = ExtResource( 4 )
@@ -83,18 +89,35 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -458720, 6, 0, -327649, 5, 0, -327648, 5, 0, -327647, 5, 0, -131073, 4, 0, -196597, 4, 0, -196554, 4, 0, -196553, 4, 0, -131071, 3, 0, -131067, 3, 0, -131063, 6, 0, -131053, 5, 0, -131052, 7, 0, -131021, 3, 0, -2, 5, 0, -65518, 5, 0, -65517, 5, 0, -65514, 5, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 2, 0, 0, 0, 0, 1, 0, 0, 2, 2, 0, 4, 0, 0, 5, 2, 0, 7, 0, 0, 8, 0, 0, 9, 2, 0, 12, 1, 0, 16, 1, 0, 20, 1, 0, 24, 1, 0, 28, 1, 0, 32, 1, 0, 36, 1, 0, 40, 1, 0, 44, 1, 0, 48, 1, 0, 52, 1, 0, 56, 1, 0 )
-_sections_unfolded = [ "Cell", "Collision", "Transform", "Visibility" ]
+tile_data = PoolIntArray( -786340, 4, 0, -655294, 1, 0, -589780, 3, 0, -524254, 0, 0, -458684, 10, 0, -393148, 7, 0, -327607, 2, 0, -196583, 5, 0, -196523, 6, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Scenery" type="TileMap" parent="." index="4"]
 
-position = Vector2( -620, 70 )
+position = Vector2( 0, -190 )
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -589777, 4, 0, -458717, 5, 0, -458712, 4, 0, -327665, 15, 0, -196580, 3, 0, -196572, 1, 0, -196561, 1, 0, -196554, 13, 0, -196547, 12, 0, -131032, 0, 0, -20, 9, 0, -15, 9, 0, -9, 7, 0, -6, 7, 0, -65523, 9, 0, -65519, 14, 0, -65507, 0, 0, -65504, 1, 0, 131055, 10, 0, 65586, 10, 0, 65588, 10, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="." index="5"]
+[node name="Ground" type="TileMap" parent="." index="5"]
 
-[node name="Harbor" type="TileMap" parent="." index="6"]
-
-position = Vector2( -12, 27 )
+position = Vector2( -50, -62 )
 scale = Vector2( 4, 4 )
 mode = 0
 tile_set = ExtResource( 6 )
@@ -112,7 +135,47 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131049, 1, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
+tile_data = PoolIntArray( -589747, 6, 0, -524212, 6, 0, -458721, 6, 0, -458675, 5, 0, -458674, 5, 0, -393140, 5, 0, -393139, 5, 0, -393138, 5, 0, -393137, 5, 0, -327649, 5, 0, -327648, 5, 0, -131073, 4, 0, -196597, 4, 0, -196541, 4, 0, -131071, 3, 0, -131067, 3, 0, -131063, 6, 0, -131050, 6, 0, -131020, 6, 0, -131019, 7, 0, -2, 5, 0, -65524, 5, 0, -65502, 5, 0, -65471, 5, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 2, 0, 0, 0, 0, 1, 0, 0, 2, 2, 0, 4, 0, 0, 5, 2, 0, 7, 0, 0, 8, 0, 0, 9, 2, 0, 12, 1, 0, 16, 1, 0, 20, 1, 0, 24, 1, 0, 28, 1, 0, 32, 1, 0, 36, 1, 0, 40, 1, 0, 44, 1, 0, 48, 1, 0, 52, 1, 0, 56, 1, 0, 60, 1, 0, 64, 1, 0, 68, 1, 0, 72, 1, 0, 76, 1, 0, 80, 1, 0, 84, 1, 0, 88, 1, 0, 92, 1, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Transform", "Visibility" ]
+
+[node name="Player" parent="." index="6" instance=ExtResource( 7 )]
+
+position = Vector2( -390, -80 )
+
+[node name="Sprite" type="Sprite" parent="." index="7"]
+
+[node name="Wall1" type="StaticBody2D" parent="." index="8"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1" index="0"]
+
+position = Vector2( -570, -470 )
+scale = Vector2( 2.03846, 40.5 )
+shape = SubResource( 1 )
+
+[node name="Wall2" type="StaticBody2D" parent="." index="9"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" index="0"]
+
+position = Vector2( 5460, -460 )
+scale = Vector2( 2.03846, 40.5 )
+shape = SubResource( 1 )
 
 
