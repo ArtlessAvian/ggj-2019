@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/tileset/Harbor Tileset v2.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/tileset/Brick Walls.tres" type="TileSet" id=2]
+[ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=3]
+[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=4]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Harbor" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -1310681, 15, 0, -1310669, 15, 0, -1310660, 14, 0, -1310654, 14, 0, -1310648, 14, 0, -1245179, 14, 0, -1245145, 15, 0, -1245133, 15, 0, -1245124, 14, 0, -1245118, 14, 0, -1245112, 14, 0, -1179643, 14, 0, -1179620, 15, 0, -1179609, 15, 0, -1179597, 15, 0, -1179588, 14, 0, -1179582, 14, 0, -1179576, 14, 0, -1114107, 14, 0, -1114084, 15, 0, -1114073, 15, 0, -1114061, 15, 0, -1114052, 14, 0, -1114046, 14, 0, -1114040, 14, 0, -1048571, 14, 0, -1048548, 15, 0, -1048537, 15, 0, -1048525, 15, 0, -1048516, 14, 0, -1048510, 14, 0, -1048504, 14, 0, -983035, 14, 0, -983012, 15, 0, -983001, 15, 0, -982989, 15, 0, -982980, 14, 0, -982974, 14, 0, -982968, 14, 0, -917499, 14, 0, -917476, 15, 0, -917465, 15, 0, -917453, 15, 0, -917444, 14, 0, -917438, 14, 0, -917432, 14, 0, -851963, 14, 0, -851940, 15, 0, -851929, 15, 0, -851917, 15, 0, -851908, 14, 0, -851902, 14, 0, -851896, 14, 0, -786427, 14, 0, -786404, 15, 0, -786393, 15, 0, -786381, 15, 0, -786372, 14, 0, -786366, 14, 0, -786360, 14, 0, -720891, 14, 0, -720868, 15, 0, -720857, 15, 0, -720845, 15, 0, -720836, 14, 0, -720830, 14, 0, -720824, 14, 0, -655355, 14, 0, -655332, 15, 0, -655324, 13, 0, -655312, 13, 0, -655301, 4, 0, -655295, 4, 0, -655289, 4, 0, -589819, 14, 0, -589796, 15, 0, -524283, 14, 0, -524263, 13, 0, -458748, 4, 0, -393180, 10, 0, -393168, 12, 0, -393157, 7, 0, -393151, 8, 0, -393145, 5, 0, -196609, 2, 0, -262130, 2, 0, -262119, 10, 0, -262118, 2, 0, 65535, 1, 0, 19, 9, 0, 27, 11, 0, 196607, 3, 0, 131073, 3, 0, 131075, 3, 0, 131077, 3, 0, 131079, 3, 0, 131081, 3, 0, 131083, 3, 0, 131085, 3, 0, 131087, 3, 0, 131089, 3, 0, 131091, 3, 0, 131093, 3, 0, 131095, 3, 0, 131097, 3, 0, 131099, 3, 0, 131101, 3, 0, 131103, 3, 0, 131105, 3, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -458738, 0, 0, -393202, 0, 0, -327666, 0, 0, -262130, 0, 0, -196594, 0, 0, -131058, 0, 0, -65522, 0, 0, 14, 0, 0, 65550, 0, 0, 131086, 0, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Buildings" type="TileMap" parent="." index="2"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -589818, 1, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="City" type="TileMap" parent="." index="3"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -458748, 5, 0, -393212, 5, 0, -327676, 5, 0, -327675, 5, 0, -262140, 5, 0, -262139, 5, 0, -196604, 5, 0, -196603, 5, 0, -196602, 5, 0, 65540, 7, 0, 131075, 5, 0, 131078, 5, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 32, -81 )
+
+
