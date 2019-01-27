@@ -122,7 +122,7 @@ extents = Vector2( 7.22766, 4.06397 )
 custom_solver_bias = 0.0
 extents = Vector2( 8.18616, 9.72387 )
 
-[node name="InsideTileSet" type="Node2D"]
+[node name="InsideTileSet" type="Node2D" index="0"]
 
 [node name="Tile Set 1" type="Sprite" parent="." index="0"]
 
@@ -249,10 +249,65 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Tile Set 12" type="Sprite" parent="." index="10"]
+[node name="Tile Set 34" type="Sprite" parent="." index="10"]
+
+position = Vector2( 412, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1018, 75, 32, 24 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile Set 35" type="Sprite" parent="." index="11"]
+
+position = Vector2( 416, 56 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1018, 51, 32, 16 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile Set 36" type="Sprite" parent="." index="12"]
+
+position = Vector2( 448, 108 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1018, 3, 16, 16 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile Set 37" type="Sprite" parent="." index="13"]
+
+position = Vector2( 472, 64 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1058, 27, 24, 24 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile Set 38" type="Sprite" parent="." index="14"]
+
+position = Vector2( 400, 120 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1018, 27, 24, 16 )
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tile Set 12" type="Sprite" parent="." index="15"]
 
 editor/display_folded = true
-position = Vector2( 160, 0 )
+position = Vector2( 212, -40 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 394, 19, 64, 32 )
@@ -287,7 +342,7 @@ shape = SubResource( 3 )
 position = Vector2( -24.0946, 11.5635 )
 shape = SubResource( 4 )
 
-[node name="Tile Set 13" type="Sprite" parent="." index="11"]
+[node name="Tile Set 13" type="Sprite" parent="." index="16"]
 
 editor/display_folded = true
 position = Vector2( 224, 0 )
@@ -314,7 +369,7 @@ bounce = 0.0
 position = Vector2( 1.52588e-005, 3.05433 )
 shape = SubResource( 5 )
 
-[node name="Tile Set 15" type="Sprite" parent="." index="12"]
+[node name="Tile Set 15" type="Sprite" parent="." index="17"]
 
 editor/display_folded = true
 position = Vector2( 240, 48 )
@@ -340,7 +395,7 @@ bounce = 0.0
 
 shape = SubResource( 6 )
 
-[node name="Tile Set 16" type="Sprite" parent="." index="13"]
+[node name="Tile Set 16" type="Sprite" parent="." index="18"]
 
 editor/display_folded = true
 position = Vector2( 272, 0 )
@@ -367,7 +422,7 @@ bounce = 0.0
 position = Vector2( 0.0944519, 9.22809 )
 shape = SubResource( 7 )
 
-[node name="Tile Set 17" type="Sprite" parent="." index="14"]
+[node name="Tile Set 17" type="Sprite" parent="." index="19"]
 
 editor/display_folded = true
 position = Vector2( 320, 0 )
@@ -394,7 +449,7 @@ bounce = 0.0
 position = Vector2( -0.140259, 7.3732 )
 shape = SubResource( 8 )
 
-[node name="Tile Set 18" type="Sprite" parent="." index="15"]
+[node name="Tile Set 18" type="Sprite" parent="." index="20"]
 
 editor/display_folded = true
 position = Vector2( 304, 48 )
@@ -421,7 +476,7 @@ bounce = 0.0
 position = Vector2( -0.0944519, -4.06214 )
 shape = SubResource( 9 )
 
-[node name="Tile Set 19" type="Sprite" parent="." index="16"]
+[node name="Tile Set 19" type="Sprite" parent="." index="21"]
 
 editor/display_folded = true
 position = Vector2( 0, 96 )
@@ -448,7 +503,7 @@ bounce = 0.0
 position = Vector2( -0.113129, 2.99776 )
 shape = SubResource( 10 )
 
-[node name="Tile Set 20" type="Sprite" parent="." index="17"]
+[node name="Tile Set 20" type="Sprite" parent="." index="22"]
 
 editor/display_folded = true
 position = Vector2( 32, 96 )
@@ -475,7 +530,7 @@ bounce = 0.0
 position = Vector2( -0.0694351, 7.40348 )
 shape = SubResource( 11 )
 
-[node name="Tile Set 21" type="Sprite" parent="." index="18"]
+[node name="Tile Set 21" type="Sprite" parent="." index="23"]
 
 editor/display_folded = true
 position = Vector2( 64.6606, 95.8611 )
@@ -503,7 +558,7 @@ bounce = 0.0
 position = Vector2( -0.31337, 6.95663 )
 shape = SubResource( 12 )
 
-[node name="Tile Set 22" type="Sprite" parent="." index="19"]
+[node name="Tile Set 22" type="Sprite" parent="." index="24"]
 
 editor/display_folded = true
 position = Vector2( 96, 96 )
@@ -530,7 +585,7 @@ bounce = 0.0
 position = Vector2( 0.208328, 7.49984 )
 shape = SubResource( 13 )
 
-[node name="Tile Set 23" type="Sprite" parent="." index="20"]
+[node name="Tile Set 23" type="Sprite" parent="." index="25"]
 
 editor/display_folded = true
 position = Vector2( 128, 96 )
@@ -557,7 +612,7 @@ bounce = 0.0
 position = Vector2( 3.07094, 6.70593 )
 shape = SubResource( 14 )
 
-[node name="Tile Set 24" type="Sprite" parent="." index="21"]
+[node name="Tile Set 24" type="Sprite" parent="." index="26"]
 
 editor/display_folded = true
 position = Vector2( 176, 96 )
@@ -585,7 +640,7 @@ bounce = 0.0
 position = Vector2( 2.70827, 6.04154 )
 shape = SubResource( 15 )
 
-[node name="Tile Set 25" type="Sprite" parent="." index="22"]
+[node name="Tile Set 25" type="Sprite" parent="." index="27"]
 
 editor/display_folded = true
 position = Vector2( 208, 96 )
@@ -612,7 +667,7 @@ bounce = 0.0
 position = Vector2( -0.0694427, 2.08329 )
 shape = SubResource( 16 )
 
-[node name="Tile Set 26" type="Sprite" parent="." index="23"]
+[node name="Tile Set 26" type="Sprite" parent="." index="28"]
 
 editor/display_folded = true
 position = Vector2( 272, 96 )
@@ -639,7 +694,7 @@ bounce = 0.0
 position = Vector2( 0.138855, 1.80551 )
 shape = SubResource( 17 )
 
-[node name="Tile Set 27" type="Sprite" parent="." index="24"]
+[node name="Tile Set 27" type="Sprite" parent="." index="29"]
 
 editor/display_folded = true
 position = Vector2( 240, 96 )
@@ -667,7 +722,7 @@ bounce = 0.0
 position = Vector2( 1.41702, 2.73959 )
 shape = SubResource( 18 )
 
-[node name="Tile Set 28" type="Sprite" parent="." index="25"]
+[node name="Tile Set 28" type="Sprite" parent="." index="30"]
 
 position = Vector2( 304, 96 )
 texture = ExtResource( 1 )
@@ -678,7 +733,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Tile Set 29" type="Sprite" parent="." index="26"]
+[node name="Tile Set 29" type="Sprite" parent="." index="31"]
 
 editor/display_folded = true
 position = Vector2( 353.11, 67.2093 )
@@ -704,10 +759,10 @@ bounce = 0.0
 
 shape = SubResource( 26 )
 
-[node name="Tile Set 30" type="Sprite" parent="." index="27"]
+[node name="Tile Set 30" type="Sprite" parent="." index="32"]
 
 editor/display_folded = true
-position = Vector2( 378.835, 67.1672 )
+position = Vector2( 360, 128 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 250, 3, 16, 16 )
@@ -730,7 +785,7 @@ bounce = 0.0
 
 shape = SubResource( 21 )
 
-[node name="Tile Set 31" type="Sprite" parent="." index="28"]
+[node name="Tile Set 31" type="Sprite" parent="." index="33"]
 
 editor/display_folded = true
 position = Vector2( -36, 0 )
@@ -757,8 +812,9 @@ bounce = 0.0
 shape = SubResource( 22 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tile Set 33" type="Sprite" parent="." index="29"]
+[node name="Tile Set 33" type="Sprite" parent="." index="34"]
 
+editor/display_folded = true
 position = Vector2( 276, 76 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -784,7 +840,7 @@ position = Vector2( -0.138214, 0 )
 shape = SubResource( 23 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Tile Set 32" type="Sprite" parent="." index="30"]
+[node name="Tile Set 32" type="Sprite" parent="." index="35"]
 
 editor/display_folded = true
 position = Vector2( 346.702, 93.2248 )
@@ -810,10 +866,10 @@ bounce = 0.0
 
 shape = SubResource( 24 )
 
-[node name="Tile Set 14" type="Sprite" parent="." index="31"]
+[node name="Tile Set 14" type="Sprite" parent="." index="36"]
 
 editor/display_folded = true
-position = Vector2( 208, 48 )
+position = Vector2( 154.274, -11.2736 )
 scale = Vector2( -1, 1 )
 texture = ExtResource( 1 )
 region_enabled = true
