@@ -1,12 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Assets/City Background Dawn-Midday.png" type="Texture" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Assets/buildings/City Buildings Block 1.png" type="Texture" id=3]
-[ext_resource path="res://Assets/buildings/Cage.png" type="Texture" id=4]
-[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Game/LevelElement/Fish.tscn" type="PackedScene" id=6]
-
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Assets/buildings/City Buildings Block 1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/buildings/Cage.png" type="Texture" id=3]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/LevelElement/Fish.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -36,7 +34,6 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -0.140154, -178.012 )
 scale = Vector2( 1.99927, 2.72332 )
-texture = ExtResource( 1 )
 
 [node name="Support" type="RigidBody2D" parent="." index="1"]
 
@@ -70,7 +67,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="Support" index="1"]
 
 position = Vector2( -126.245, 11.5162 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 
 [node name="Buildings" type="RigidBody2D" parent="." index="2"]
 
@@ -96,7 +93,7 @@ angular_damp = -1.0
 [node name="Sprite" type="Sprite" parent="Buildings" index="0"]
 
 scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings" index="1"]
@@ -138,7 +135,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -2.776, 3.42303 )
 scale = Vector2( 2.13713, 2.13713 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="Cage2" type="RigidBody2D" parent="Buildings" index="3"]
 
@@ -173,7 +170,7 @@ shape = SubResource( 3 )
 
 position = Vector2( -2.776, 3.42303 )
 scale = Vector2( 2.13713, 2.13713 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="Cage3" type="RigidBody2D" parent="Buildings" index="4"]
 
@@ -208,7 +205,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 position = Vector2( -2.776, 3.42303 )
 scale = Vector2( 2.13713, 2.13713 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="Cage4" type="RigidBody2D" parent="Buildings" index="5"]
 
@@ -243,7 +240,7 @@ shape = SubResource( 3 )
 
 position = Vector2( -2.23566, 2.88269 )
 scale = Vector2( 2.13713, 2.13713 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="3"]
 
@@ -274,12 +271,12 @@ position = Vector2( -3.32933, -13.1868 )
 scale = Vector2( 2.58723, 2.5533 )
 shape = SubResource( 4 )
 
-[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Player" parent="." index="4" instance=ExtResource( 4 )]
 
 position = Vector2( -19.7, 237.878 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
 
-[node name="Fish" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Fish" parent="." index="5" instance=ExtResource( 5 )]
 
 position = Vector2( 250.394, 163.234 )
 
