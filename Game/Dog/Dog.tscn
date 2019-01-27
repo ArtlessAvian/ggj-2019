@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Game/Dog/Dog.gd" type="Script" id=1]
 [ext_resource path="res://Game/Trap/GenericTrap.gd" type="Script" id=2]
@@ -8,7 +8,7 @@
 
 resource_name = "Borf"
 length = 1.0
-loop = true
+loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("dogggggg:frame")
@@ -56,25 +56,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=3]
 
-resource_name = "Stand"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("dogggggg:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 1 ]
-}
-
-[sub_resource type="Animation" id=4]
-
+resource_name = "Walk"
 length = 4.0
 loop = true
 step = 1.0
@@ -103,22 +85,73 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
+[sub_resource type="Animation" id=4]
+
+resource_name = "guard"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("dogggggg:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("dogggggg:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-extents = Vector2( 29.9575, 1 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
-extents = Vector2( 38.1191, 23.8558 )
+extents = Vector2( 25, 27 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 1024, 100 )
+extents = Vector2( 20, 20 )
 
-[node name="Dog" type="KinematicBody2D"]
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 400, 100 )
+
+[sub_resource type="GDScript" id=8]
+
+script/source = "extends Label
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+#func _ready():
+#	# Called when the node is added to the scene for the first time.
+#	# Initialization here
+#	pass
+
+func _process(delta):
+	self.text = $\"..\".my_state
+	# Called every frame. Delta is time since last frame.
+	# Update game logic here.
+	pass
+"
+
+[node name="Dog" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 0
@@ -148,12 +181,11 @@ playback_speed = 1.0
 anims/Borf = SubResource( 1 )
 anims/Run = SubResource( 2 )
 anims/Stand = SubResource( 3 )
-anims/Walk = SubResource( 4 )
+anims/guard = SubResource( 4 )
 blend_times = [  ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
-position = Vector2( 10, 29 )
 shape = SubResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
@@ -176,7 +208,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap" index="0"]
 
 position = Vector2( 6, 3 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CatDetector" type="Area2D" parent="." index="4"]
@@ -195,7 +227,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatDetector" index="0"]
 
 position = Vector2( 0, -70 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="dogggggg" type="Sprite" parent="." index="5"]
@@ -205,8 +237,29 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 vframes = 3
 hframes = 4
-frame = 4
-_sections_unfolded = [ "Animation", "Region", "Transform", "Z Index" ]
+frame = 1
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
+
+[node name="Label" type="Label" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -20.0
+margin_top = -51.0
+margin_right = 20.0
+margin_bottom = -37.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = SubResource( 8 )
 
 [connection signal="body_entered" from="Trap" to="Trap" method="_on_Trap_body_entered"]
 
