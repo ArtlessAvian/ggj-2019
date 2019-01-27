@@ -43,7 +43,8 @@ func get_input(delta):
 		# A frame late but who cares
 		$RayCast2D.cast_to = (cat.global_position - self.global_position)
 		if $RayCast2D.is_colliding():
-			my_state = "PatrolLeft"
+			my_state = "ChaseTimeout"
+			timer = 5
 	elif (cat != null):
 		$RayCast2D.cast_to = (cat.global_position - self.global_position)
 		if not $RayCast2D.is_colliding():
@@ -55,6 +56,8 @@ func get_input(delta):
 	if timer <= 0:
 		if (my_state == "Bark"):
 			my_state = "Chase"
+		elif (my_state == "ChaseTimeout"):
+			my_state = "Patrol"
 	timer -= delta
 
 	if (my_state == "PatrolLeft" or my_state == "PatrolRight"):
@@ -96,7 +99,13 @@ var cat = null
 
 func _on_CatDetector_body_entered(body):
 	cat = body
+	$Raycast.enabled = true
 
 func _on_CatDetector_body_exited(body):
-	pass
+	if (my_state == "Chase"):
+		my_state = "ChaseTimeout"
+		cat = null
+		$RayCast2D.cast_to = Vector2(0, 0)
+		$RayCast2D.enabled = false
+		timer = 5
 #	my_state = "PatrolRight"
