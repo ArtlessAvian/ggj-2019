@@ -20,22 +20,37 @@ func _physics_process(delta):
 
 	self.move_and_slide(vel, Vector2(0, -1))
 
-	if (vel.x != 0):
+	if $AnimationPlayer.assigned_animation != "Borf":
 		$dogggggg.flip_h = vel.x < 0
-		
-		if $AnimationPlayer.assigned_animation == "Walk":
-			$AnimationPlayer.advance(abs(vel.x) / 2000) # whee magic numbers
+
+	if $AnimationPlayer.assigned_animation == "Walk":
+		$AnimationPlayer.advance(abs(vel.x) / 2000) # whee magic numbers
 
 var my_state = "PatrolLeft"
 var timer = 5
 
 func get_input(delta):
+
+	
 	if (my_state == "PatrolLeft"):
 		if (self.position.x < min_x):
 			my_state = "PatrolRight"
 	elif (my_state == "PatrolRight"):
 		if (self.position.x > max_x):
 			my_state = "PatrolLeft"
+	
+	if (my_state == "Chase" or my_state == "Bark"):
+		# A frame late but who cares
+		$RayCast2D.cast_to = (cat.global_position - self.global_position)
+		if $RayCast2D.is_colliding():
+			my_state = "PatrolLeft"
+	elif (cat != null):
+		$RayCast2D.cast_to = (cat.global_position - self.global_position)
+		if not $RayCast2D.is_colliding():
+			my_state = "Bark"
+			timer = 1
+			$dogggggg.flip_h = $RayCast2D.cast_to.x < 0
+			$AnimationPlayer.play("Borf")
 			
 	if timer <= 0:
 		if (my_state == "Bark"):
@@ -80,11 +95,8 @@ func get_input(delta):
 var cat = null
 
 func _on_CatDetector_body_entered(body):
-	my_state = "Bark"
-	timer = 1
 	cat = body
-	$AnimationPlayer.play("Borf")
-
 
 func _on_CatDetector_body_exited(body):
-	my_state = "PatrolRight"
+	pass
+#	my_state = "PatrolRight"
