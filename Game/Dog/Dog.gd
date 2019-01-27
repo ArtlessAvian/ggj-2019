@@ -60,11 +60,14 @@ func get_input(delta):
 	elif (cat != null):
 		$RayCast2D.cast_to = (cat.global_position - self.global_position)
 		if not $RayCast2D.is_colliding():
-			my_state = "Bark"
-			timer = 1
-			$dogggggg.flip_h = $RayCast2D.cast_to.x < 0
-			$AnimationPlayer.play("Borf")
-			$AnimationPlayer.queue("guard")
+			if (my_state != "ChaseTimeout"):
+				my_state = "Bark"
+				timer = 1
+				$dogggggg.flip_h = $RayCast2D.cast_to.x < 0
+				$AnimationPlayer.play("Borf")
+				$AnimationPlayer.queue("guard")
+			else:
+				my_state = "Chase"
 			
 	if timer <= 0:
 		if (my_state == "Bark"):
@@ -75,7 +78,7 @@ func get_input(delta):
 
 	if (my_state == "PatrolLeft" or my_state == "PatrolRight"):
 		if $AnimationPlayer.assigned_animation != "Walk":
-			$AnimationPlayer.play("")
+			$AnimationPlayer.play("Walk")
 		vel.x = 100 * (-1 if my_state == "PatrolLeft" else 1)
 		$dogggggg.flip_h = vel.x < 0
 	elif (my_state == "Bark"):
