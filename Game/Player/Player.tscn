@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 18, 16 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 
 resource_name = "DONT FEEL SO WELL (HUUUURT)"
 length = 1.0
@@ -28,9 +28,8 @@ tracks/0/keys = {
 "values": [ 11 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "Fish GET"
 length = 2.0
 loop = false
 step = 0.1
@@ -83,14 +82,13 @@ tracks/3/keys = {
 "values": [ 0.1, 0.0, 0.1 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource_name = "Jump"
 length = 1.0
 loop = false
 step = 0.1
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 
 length = 5.0
 loop = false
@@ -108,7 +106,7 @@ tracks/0/keys = {
 "values": [ 1, 3 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 
 length = 4.0
 loop = true
@@ -188,11 +186,11 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-"anims/DONT FEEL SO WELL (HUUUURT)" = SubResource( 6 )
-"anims/Fish GET" = SubResource( 2 )
-anims/Jump = SubResource( 3 )
-anims/Stand = SubResource( 4 )
-anims/Walk = SubResource( 5 )
+"anims/DONT FEEL SO WELL (HUUUURT)" = SubResource( 2 )
+"anims/Fish GET" = SubResource( 3 )
+anims/Jump = SubResource( 4 )
+anims/Stand = SubResource( 5 )
+anims/Walk = SubResource( 6 )
 blend_times = [  ]
 
 

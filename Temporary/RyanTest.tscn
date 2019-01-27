@@ -27,7 +27,7 @@ extents = Vector2( 50.9689, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="RyanTest" type="Node2D"]
+[node name="RyanTest" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -176,7 +176,6 @@ texture = ExtResource( 4 )
 
 [node name="Cage3" type="RigidBody2D" parent="Buildings" index="4"]
 
-editor/display_folded = true
 position = Vector2( -297.918, 234.161 )
 input_pickable = false
 collision_layer = 1
@@ -202,6 +201,7 @@ angular_damp = -1.0
 position = Vector2( -1.41101, 2.44019 )
 scale = Vector2( 0.590487, 2.19136 )
 shape = SubResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="Buildings/Cage3" index="1"]
 
