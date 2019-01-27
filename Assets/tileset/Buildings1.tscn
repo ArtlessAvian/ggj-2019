@@ -1,163 +1,68 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/buildings/City Buildings Block 2.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 33, 8 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 79, 17 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15.5, 6 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 39.5003, 5 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
-extents = Vector2( 48.0003, 8.5 )
+extents = Vector2( 9.57695, 0.928609 )
 
 [sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
-extents = Vector2( 39.0003, 5 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
-extents = Vector2( 56.5003, 8 )
+extents = Vector2( 10, 16.6203 )
 
 [sub_resource type="RectangleShape2D" id=11]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.0003, 6 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=12]
 
 custom_solver_bias = 0.0
-extents = Vector2( 81.1165, 0.4704 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=13]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 1.9704 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.6165, 6.9704 )
+extents = Vector2( 19.1177, 10 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 9.3082 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 6.4928, 5.8082 )
-
-[sub_resource type="RectangleShape2D" id=14]
-
-custom_solver_bias = 0.0
-extents = Vector2( 40.9928, 8.3082 )
-
-[sub_resource type="RectangleShape2D" id=15]
-
-custom_solver_bias = 0.0
-extents = Vector2( 16.2429, 5.3082 )
-
-[sub_resource type="RectangleShape2D" id=16]
-
-custom_solver_bias = 0.0
-extents = Vector2( 27.0001, 5 )
-
-[sub_resource type="RectangleShape2D" id=17]
-
-custom_solver_bias = 0.0
-extents = Vector2( 28.0001, 5.4385 )
-
-[sub_resource type="RectangleShape2D" id=18]
-
-custom_solver_bias = 0.0
-extents = Vector2( 27.0001, 5.5 )
-
-[sub_resource type="RectangleShape2D" id=19]
-
-custom_solver_bias = 0.0
-extents = Vector2( 48.0001, 8.5 )
-
-[sub_resource type="RectangleShape2D" id=20]
-
-custom_solver_bias = 0.0
-extents = Vector2( 16.5001, 5.9998 )
-
-[sub_resource type="RectangleShape2D" id=21]
-
-custom_solver_bias = 0.0
-extents = Vector2( 48.4858, 5.5436 )
-
-[sub_resource type="RectangleShape2D" id=22]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.9649, 7.5221 )
-
-[sub_resource type="RectangleShape2D" id=23]
-
-custom_solver_bias = 0.0
-extents = Vector2( 65.2422, 2.0623 )
-
-[sub_resource type="RectangleShape2D" id=24]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32.3553, 10 )
-
-[sub_resource type="RectangleShape2D" id=25]
-
-custom_solver_bias = 0.0
-extents = Vector2( 5.19678, 8.2694 )
-
-[sub_resource type="RectangleShape2D" id=26]
-
-custom_solver_bias = 0.0
-extents = Vector2( 49.2365, 3.4529 )
-
-[sub_resource type="RectangleShape2D" id=27]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=28]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=29]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=30]
-
-custom_solver_bias = 0.0
-extents = Vector2( 19.1177, 10 )
-
-[sub_resource type="RectangleShape2D" id=31]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=32]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -166,10 +71,15 @@ extents = Vector2( 10, 10 )
 
 [node name="Health Centre" type="Sprite" parent="." index="0"]
 
+<<<<<<< HEAD
+editor/display_folded = true
+position = Vector2( 1, -2 )
+=======
+>>>>>>> 0a99af35beb1f95dea9bb1eff9e24c8f67788fc8
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 80, 80, 160, 160 )
-_sections_unfolded = [ "Region", "Transform" ]
+_sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -183,29 +93,27 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Health Centre/StaticBody2D" index="0"]
 
-position = Vector2( -1, 34.5 )
+position = Vector2( -1.5, 35 )
+scale = Vector2( 3.19231, -0.692308 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Health Centre/StaticBody2D" index="1"]
 
 position = Vector2( -0.999991, -32 )
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 7.92308, -1.76923 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Health Centre/StaticBody2D" index="2"]
 
 position = Vector2( -41.5, -54 )
-shape = SubResource( 3 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 1.73077, -0.615385 )
+shape = SubResource( 1 )
 
 [node name="3 story" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 390.565, -17.2709 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -224,37 +132,37 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="3 story/StaticBody2D" index="0"]
 
 position = Vector2( 4.9347, 26.2709 )
-shape = SubResource( 4 )
+scale = Vector2( 3.80769, 0.615385 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="3 story/StaticBody2D" index="1"]
 
 position = Vector2( 5.4347, 47.7709 )
-shape = SubResource( 5 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 4.76923, 0.961538 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="3 story/StaticBody2D" index="2"]
 
 position = Vector2( 6.43468, -21.7291 )
-shape = SubResource( 6 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 4, 0.615385 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="3 story/StaticBody2D" index="3"]
 
 position = Vector2( 6.93465, -72.7291 )
-shape = SubResource( 7 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 5.65385, 0.846154 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="3 story/StaticBody2D" index="4"]
 
 position = Vector2( -26.5653, -86.7291 )
-shape = SubResource( 8 )
-_sections_unfolded = [ "Transform" ]
+scale = Vector2( 1.61538, 0.538461 )
+shape = SubResource( 2 )
 
 [node name="Pops!" type="Sprite" parent="." index="2"]
 
@@ -277,12 +185,10 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pops!/StaticBody2D" index="0"]
 
 position = Vector2( 5.88354, -24.5296 )
-<<<<<<< HEAD
 scale = Vector2( 8.03846, 0.730769 )
 shape = SubResource( 6 )
 
@@ -297,27 +203,11 @@ shape = SubResource( 6 )
 position = Vector2( 53.3835, -38.0296 )
 scale = Vector2( 1.61539, 0.615385 )
 shape = SubResource( 6 )
-=======
-shape = SubResource( 9 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pops!/StaticBody2D" index="1"]
-
-position = Vector2( -81.1164, -18.0296 )
-shape = SubResource( 10 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pops!/StaticBody2D" index="2"]
-
-position = Vector2( 53.3835, -29.0296 )
-shape = SubResource( 11 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Nyan Sushi" type="Sprite" parent="." index="3"]
 
 editor/display_folded = true
-position = Vector2( -150, -6 )
+position = Vector2( -149.507, -5.8082 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 496, 64, 112, 176 )
@@ -335,35 +225,22 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Nyan Sushi/StaticBody2D" index="0"]
 
-<<<<<<< HEAD
 position = Vector2( -1.99276, 40.3082 )
 scale = Vector2( 3.26923, 0.884615 )
 shape = SubResource( 7 )
-=======
-position = Vector2( -2, 40 )
-shape = SubResource( 12 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Nyan Sushi/StaticBody2D" index="1"]
 
 position = Vector2( -50.4928, -57.1918 )
-<<<<<<< HEAD
 scale = Vector2( 0.538462, 0.538461 )
 shape = SubResource( 7 )
-=======
-shape = SubResource( 13 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Nyan Sushi/StaticBody2D" index="2"]
 
 position = Vector2( -1.99276, -65.6918 )
-<<<<<<< HEAD
 scale = Vector2( 4.11538, 0.807692 )
 shape = SubResource( 7 )
 
@@ -372,16 +249,6 @@ shape = SubResource( 7 )
 position = Vector2( -17.9928, -78.6918 )
 scale = Vector2( 1.65385, 0.576923 )
 shape = SubResource( 7 )
-=======
-shape = SubResource( 14 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Nyan Sushi/StaticBody2D" index="3"]
-
-position = Vector2( -18.2429, -78.6918 )
-shape = SubResource( 15 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="4 Story" type="Sprite" parent="." index="4"]
 
@@ -404,62 +271,36 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="0"]
 
 position = Vector2( -21.6971, 57.6142 )
-<<<<<<< HEAD
 scale = Vector2( 2.86238, -5.3454 )
 shape = SubResource( 8 )
-=======
-shape = SubResource( 16 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="1"]
 
 position = Vector2( -21.6971, 10.0527 )
-<<<<<<< HEAD
 scale = Vector2( 2.78287, -5.71156 )
 shape = SubResource( 8 )
-=======
-shape = SubResource( 17 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="2"]
 
 position = Vector2( -21.6971, -37.8858 )
-<<<<<<< HEAD
 scale = Vector2( 2.78287, -4.96359 )
 shape = SubResource( 8 )
-=======
-shape = SubResource( 18 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="3"]
 
 position = Vector2( -8.6971, -88.8858 )
-<<<<<<< HEAD
 scale = Vector2( 4.92965, -8.27264 )
 shape = SubResource( 8 )
-=======
-shape = SubResource( 19 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="4"]
 
 position = Vector2( -34.1971, -102.386 )
-<<<<<<< HEAD
 scale = Vector2( 1.70948, -6.10903 )
 shape = SubResource( 8 )
-=======
-shape = SubResource( 20 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Bon Bon Cafe" type="Sprite" parent="." index="5"]
 
@@ -475,6 +316,7 @@ __meta__ = {
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bon Bon Cafe" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -482,23 +324,16 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bon Bon Cafe/StaticBody2D" index="0"]
 
 position = Vector2( -2.59384, -26.9119 )
-<<<<<<< HEAD
 scale = Vector2( 4.92115, 0.557975 )
 shape = SubResource( 9 )
-=======
-shape = SubResource( 21 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Bon Bon Cafe/StaticBody2D" index="1"]
 
 position = Vector2( -42.0729, -28.9334 )
-<<<<<<< HEAD
 scale = Vector2( 1.64648, 0.713476 )
 shape = SubResource( 9 )
 
@@ -507,16 +342,6 @@ shape = SubResource( 9 )
 position = Vector2( -2.35025, -22.3932 )
 scale = Vector2( 6.36596, 0.210384 )
 shape = SubResource( 9 )
-=======
-shape = SubResource( 22 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bon Bon Cafe/StaticBody2D" index="2"]
-
-position = Vector2( -2.35022, -22.3932 )
-shape = SubResource( 23 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Burgr Land" type="Sprite" parent="." index="6"]
 
@@ -539,40 +364,24 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Burgr Land/StaticBody2D" index="0"]
 
 position = Vector2( -2.35535, -29.9899 )
-<<<<<<< HEAD
 scale = Vector2( 3.24723, 0.631935 )
 shape = SubResource( 10 )
-=======
-shape = SubResource( 24 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Burgr Land/StaticBody2D" index="1"]
 
 position = Vector2( -37.1968, -27.7306 )
-<<<<<<< HEAD
 scale = Vector2( 0.56712, 0.516781 )
 shape = SubResource( 10 )
-=======
-shape = SubResource( 25 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Burgr Land/StaticBody2D" index="2"]
 
 position = Vector2( -2.23649, -21.5471 )
-<<<<<<< HEAD
 scale = Vector2( 4.92115, 0.201624 )
 shape = SubResource( 10 )
-=======
-shape = SubResource( 26 )
-_sections_unfolded = [ "Transform" ]
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Railing 1" type="Sprite" parent="." index="7"]
 
@@ -581,7 +390,7 @@ position = Vector2( -287, 191 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 384, 16, 80, 16 )
-_sections_unfolded = [ "Region", "Transform" ]
+_sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -595,17 +404,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Railing 1/StaticBody2D" index="0"]
 
 position = Vector2( -1.50001, 2.5 )
 scale = Vector2( 3.80769, 0.499999 )
-<<<<<<< HEAD
 shape = SubResource( 11 )
-=======
-shape = SubResource( 27 )
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Railing 2" type="Sprite" parent="." index="8"]
 
@@ -628,17 +432,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Railing 2/StaticBody2D" index="0"]
 
 position = Vector2( 1.5, 1.99999 )
 scale = Vector2( 2.73077, 0.538461 )
-<<<<<<< HEAD
 shape = SubResource( 12 )
-=======
-shape = SubResource( 28 )
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Open Door 1" type="Sprite" parent="." index="9"]
 
@@ -661,17 +460,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Open Door 1/StaticBody2D" index="0"]
 
 position = Vector2( -1.5, -3.21865e-006 )
 scale = Vector2( 0.961538, 1.53846 )
-<<<<<<< HEAD
 shape = SubResource( 13 )
-=======
-shape = SubResource( 29 )
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Open Door 2" type="Sprite" parent="." index="10"]
 
@@ -694,17 +488,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Open Door 2/StaticBody2D" index="0"]
 
 position = Vector2( 5.98077, -3.21865e-006 )
 scale = Vector2( 0.496471, 1.53846 )
-<<<<<<< HEAD
 shape = SubResource( 3 )
-=======
-shape = SubResource( 30 )
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Cable Car" type="Sprite" parent="." index="11"]
 
@@ -727,17 +516,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Cable Car/StaticBody2D" index="0"]
 
 position = Vector2( 5.50001, -11 )
 scale = Vector2( 4.88462, 0.307692 )
-<<<<<<< HEAD
 shape = SubResource( 4 )
-=======
-shape = SubResource( 31 )
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 [node name="Train Station" type="Sprite" parent="." index="12"]
 
@@ -759,16 +543,11 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Train Station/StaticBody2D" index="0"]
 
 position = Vector2( 0.999999, 27.5 )
 scale = Vector2( 6.46154, 0.423077 )
-<<<<<<< HEAD
 shape = SubResource( 5 )
-=======
-shape = SubResource( 32 )
->>>>>>> 850ab31393e2f3c093d02cba0df34ec18e1a4093
 
 

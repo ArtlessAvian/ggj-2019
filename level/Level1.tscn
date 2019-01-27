@@ -6,9 +6,8 @@
 
 [node name="Level1" type="Node2D" index="0"]
 
-[node name="house" type="TileMap" parent="." index="0"]
+[node name="TileMap" type="TileMap" parent="." index="0"]
 
-scale = Vector2( 5.5, 5.5 )
 mode = 0
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 64, 64 )
@@ -25,8 +24,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -65535, 1, 0 )
-_sections_unfolded = [ "Transform" ]
+tile_data = PoolIntArray( 458756, 4, 0 )
 
 [node name="ground" type="TileMap" parent="." index="1"]
 
