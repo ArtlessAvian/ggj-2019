@@ -110,7 +110,7 @@ extents = Vector2( 4, 16 )
 [sub_resource type="RectangleShape2D" id=23]
 
 custom_solver_bias = 0.0
-extents = Vector2( 14.3875, 3.77496 )
+extents = Vector2( 14.3875, 1.582 )
 
 [sub_resource type="RectangleShape2D" id=24]
 
@@ -759,11 +759,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Tile Set 33" type="Sprite" parent="." index="29"]
 
-editor/display_folded = true
-position = Vector2( 371.439, 153.582 )
+position = Vector2( 276, 76 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 722, 299, 40, 24 )
+region_rect = Rect2( 802, 203, 32, 8 )
 _sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -781,8 +780,9 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile Set 33/StaticBody2D" index="0"]
 
-position = Vector2( -0.138214, 6.44976 )
+position = Vector2( -0.138214, 0 )
 shape = SubResource( 23 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Tile Set 32" type="Sprite" parent="." index="30"]
 

@@ -7,7 +7,7 @@
 
 [node name="Level2" type="Node2D" index="0"]
 
-position = Vector2( 128, -768 )
+position = Vector2( 128, -800 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="BackWall" type="TileMap" parent="." index="0"]
@@ -51,7 +51,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -589816, 30, 0, -589798, 30, 0, -524262, 30, 0, -458744, 30, 0, -458726, 30, 0, -393190, 30, 0, -327654, 30, 0, -196610, 30, 0, -262118, 30, 0, -131074, 30, 0, -65538, 30, 0, -131056, 30, 0, -131046, 30, 0, -2, 30, 0, -65520, 30, 0, -65510, 30, 0, 26, 30, 0, 131070, 30, 0, 65562, 30, 0, 196606, 30, 0, 131098, 30, 0, 262142, 30, 0, 196634, 30, 0, 327678, 30, 0, 262170, 30, 0, 393214, 30, 0, 327706, 30, 0, 458750, 30, 0, 393242, 30, 0, 524286, 30, 0, 458778, 30, 0, 589822, 30, 0, 655358, 30, 0, 720894, 30, 0 )
+tile_data = PoolIntArray( -589816, 30, 0, -589798, 30, 0, -524262, 30, 0, -458744, 30, 0, -458726, 30, 0, -393190, 30, 0, -327654, 30, 0, -196610, 30, 0, -262118, 30, 0, -131074, 30, 0, -65538, 30, 0, -131056, 30, 0, -131046, 30, 0, -2, 30, 0, -65520, 30, 0, -65510, 30, 0, 26, 30, 0, 131070, 30, 0, 65539, 10, 0, 65552, 30, 0, 65562, 30, 0, 196606, 30, 0, 131098, 30, 0, 262142, 30, 0, 196634, 30, 0, 327678, 30, 0, 262170, 30, 0, 393214, 30, 0, 327706, 30, 0, 458750, 30, 0, 393242, 30, 0, 524286, 30, 0, 458778, 30, 0, 589822, 30, 0, 655358, 30, 0, 720894, 30, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Floor" type="TileMap" parent="." index="2"]
@@ -91,12 +91,12 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -1048547, 35, 0, -1048536, 35, 0, -983016, 12, 0, -983006, 13, 0, -786402, 14, 0, -786392, 24, 0, -720868, 18, 0, -655340, 11, 0, -655322, 23, 0, -262127, 37, 0, -262119, 37, 0, -196592, 44, 0, -196584, 44, 0, -131035, 12, 0, -131028, 39, 0, 65533, 26, 0, 196605, 25, 0, 131107, 5, 0, 131114, 45, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
+tile_data = PoolIntArray( -1048547, 35, 0, -1048536, 35, 0, -983016, 12, 0, -983006, 13, 0, -786402, 14, 0, -786392, 24, 0, -720868, 18, 0, -655340, 11, 0, -655322, 23, 0, -327663, 35, 0, -327655, 35, 0, -131055, 44, 0, -131047, 44, 0, -131035, 12, 0, -131028, 39, 0, 65533, 26, 0, 196605, 25, 0, 131107, 5, 0, 131114, 45, 0, 917507, 44, 0, 917516, 44, 0, 1114130, 13, 0, 1376253, 25, 0, 1310738, 25, 0, 1376257, 20, 0, 1376266, 9, 0, 1376272, 28, 0, 1376278, 17, 0, 1507327, 9, 0, 1441801, 22, 0, 1441805, 16, 0, 1441817, 15, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 [node name="Door" type="Sprite" parent="." index="4"]
 
@@ -110,11 +110,36 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Player" parent="." index="5" instance=ExtResource( 3 )]
 
-position = Vector2( 20, -380 )
+position = Vector2( 232, -100 )
+collision_mask = 3
 
-[node name="Dog" parent="." index="6" instance=ExtResource( 4 )]
+[node name="Dogs" type="Node2D" parent="." index="6"]
 
-position = Vector2( 552, 138 )
+editor/display_folded = true
+
+[node name="Dog" parent="Dogs" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 752, 58 )
+min_x = 492
+max_x = 982
+
+[node name="Dog2" parent="Dogs" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 602, 110 )
+min_x = 492
+max_x = 982
+
+[node name="Dog3" parent="Dogs" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 1062, 650 )
+min_x = 492
+max_x = 982
+
+[node name="Dog4" parent="Dogs" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 262, 660 )
+min_x = 492
+max_x = 982
 
 [node name="Front" type="TileMap" parent="." index="7"]
 
