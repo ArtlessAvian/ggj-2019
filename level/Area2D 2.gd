@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Area2D
 
 # class member variables go here, for example:
 # var a = 2
@@ -13,16 +13,3 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
-
-
-func _on_StartButton_pressed():
-	#get_tree().change_scene(
-	pass # replace with function body
-
-
-func _on_QuitButton_pressed():
-	get_tree().quit()
-
-
-func _on_CreditsButton_pressed():
-	get_tree().change_scene("res://level/Credits1.tscn")
