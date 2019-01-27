@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/liquidWaterTop.png-d689421ee0547a941db9855b6fcad315.stex"
+path="res://.import/SHIPPING_DOCKS_AREA.png-e16ddfa11565baff0024d08a8f49630e.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/liquidWaterTop.png"
-dest_files=[ "res://.import/liquidWaterTop.png-d689421ee0547a941db9855b6fcad315.stex" ]
+source_file="res://Assets/Backdrops/SHIPPING_DOCKS_AREA.png"
+dest_files=[ "res://.import/SHIPPING_DOCKS_AREA.png-e16ddfa11565baff0024d08a8f49630e.stex" ]
 
 [params]
 
