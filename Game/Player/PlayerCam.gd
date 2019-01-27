@@ -15,7 +15,7 @@ func _process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
 	if get_parent().grounded:
-		self.offset.y -= min(2, self.offset.y)
+		self.offset.y -= min(5, self.offset.y)
 	else:
 		self.offset.y = max(0, pre_jump_y - get_parent().position.y)
 

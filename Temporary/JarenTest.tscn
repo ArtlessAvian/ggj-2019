@@ -1,15 +1,26 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=1]
-[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Backdrops/City Background Dusk.png" type="Texture" id=1]
+[ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=2]
+[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=3]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D" index="0"]
 
-[node name="TileMap" type="TileMap" parent="." index="0"]
+[node name="City Background Dusk" type="Sprite" parent="." index="0"]
 
-position = Vector2( -70, 90 )
+position = Vector2( 1500, -190 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -46 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Building" type="TileMap" parent="." index="1"]
+
+position = Vector2( 0, -32 )
+scale = Vector2( 4, 4 )
 mode = 0
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -24,12 +35,36 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131073, 4, 0, -196597, 4, 0, -131071, 3, 0, -131067, 3, 0, -131063, 6, 0, -131053, 5, 0, -131052, 7, 0, -131048, 5, 0, -65518, 5, 0, -65517, 5, 0, -65512, 5, 0, -65511, 5, 0, 65535, 2, 0, 0, 0, 0, 1, 0, 0, 2, 2, 0, 4, 0, 0, 5, 2, 0, 7, 0, 0, 8, 0, 0, 9, 2, 0, 12, 1, 0, 16, 1, 0, 20, 1, 0, 24, 1, 0 )
-_sections_unfolded = [ "Cell" ]
+tile_data = PoolIntArray( -589780, 3, 0, -524254, 0, 0, -196583, 5, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Ground" type="TileMap" parent="." index="2"]
 
-position = Vector2( 170, 70 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( -70, 90 )
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -458720, 6, 0, -327649, 5, 0, -327648, 5, 0, -327647, 5, 0, -131073, 4, 0, -196597, 4, 0, -131071, 3, 0, -131067, 3, 0, -131063, 6, 0, -131053, 5, 0, -131052, 7, 0, -131048, 5, 0, -131047, 5, 0, -2, 5, 0, -65518, 5, 0, -65517, 5, 0, -65512, 5, 0, -65511, 5, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 2, 0, 0, 0, 0, 1, 0, 0, 2, 2, 0, 4, 0, 0, 5, 2, 0, 7, 0, 0, 8, 0, 0, 9, 2, 0, 12, 1, 0, 16, 1, 0, 20, 1, 0, 24, 1, 0, 28, 1, 0, 32, 1, 0, 36, 1, 0, 40, 1, 0, 44, 1, 0, 48, 1, 0, 52, 1, 0, 56, 1, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( -420, 10 )
+
+[node name="Sprite" type="Sprite" parent="." index="4"]
 
 

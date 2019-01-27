@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/tileset/Harbor Tileset v2.tres" type="TileSet" id=1]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Harbor" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -1179545, 16, 0, -1114009, 16, 0, -1048473, 16, 0, -982948, 16, 0, -982937, 16, 0, -917412, 16, 0, -917404, 13, 0, -851886, 16, 0, -851876, 16, 0, -786350, 16, 0, -786340, 16, 0, -720814, 16, 0, -720807, 13, 0, -655278, 16, 0, -655260, 12, 0, -589742, 16, 0, -524206, 16, 0, -458673, 13, 0, -458663, 12, 0, -262054, 4, 0, -262049, 4, 0, -262044, 4, 0, -196576, 9, 0, -196568, 9, 0, -196529, 12, 0, 46, 10, 0, 68, 11, 0, 90, 5, 0, 95, 5, 0, 100, 5, 0, 65596, 11, 0, 196660, 10, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 604.376, -208.977 )
+
+
