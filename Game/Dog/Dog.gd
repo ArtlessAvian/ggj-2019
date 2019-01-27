@@ -138,3 +138,4 @@ func _on_CatDetector_body_exited(body):
 		$RayCast2D.enabled = false
 		timer = 3
 #	my_state = "PatrolRight"
+
