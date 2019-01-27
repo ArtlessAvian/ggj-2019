@@ -11,11 +11,10 @@ var vel = Vector2()
 var checkpoint
 var dead = false
 var dead_timer = 0
-var pre_jump_y
 
 func _ready():
 	checkpoint = self.global_position
-	pre_jump_y = self.position.y
+	$Camera2D.pre_jump_y = self.position.y
 
 func _physics_process(delta):
 	if ($AnimationPlayer.current_animation == "Fish GET"):
@@ -26,10 +25,14 @@ func _physics_process(delta):
 #		print(dead_timer)
 		if (dead_timer >= 1):
 			self.global_position = checkpoint
+			$Camera2D.pre_jump_y = checkpoint.y
 			self.grounded = false
 			dead = false
-		if (grounded):
-			vel.x = 0
+			vel *= 0
+		
+		vel.y += 10
+		self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
+		return
 	
 	else:
 		get_input(delta)
@@ -40,7 +43,7 @@ func _physics_process(delta):
 		if not (test_move(self.global_transform, Vector2(0, 1))):
 			grounded = false
 			
-			set_pre_jump_y()
+			$Camera2D.set_pre_jump_y()
 		
 		# Animation is probably walking
 		$AnimationPlayer.advance(abs(vel.x) / 1000) # whee magic numbers
@@ -63,15 +66,9 @@ func _physics_process(delta):
 		# Lol do it manually
 		$Sprite.frame = clamp(round(vel.y / jump_speed), -1, 1) + 5
 	
-	self.move_and_slide(vel, Vector2(0, -1))
+	self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
 	if (vel.x != 0):
 		$Sprite.flip_h = vel.x < 0
-	
-	if grounded:
-		$Camera2D.offset.y -= min(2, $Camera2D.offset.y)
-#		pre_jump_y -= min(2, $Camera2D.offset.y)
-	else:
-		$Camera2D.offset.y = max(0, pre_jump_y - position.y)
 
 func get_input(delta):
 	
@@ -79,9 +76,9 @@ func get_input(delta):
 		$AnimationPlayer.play("Walk")
 	
 	if Input.is_action_pressed("ui_left"):
-		vel.x -= delta * move_acc
+		vel.x -= delta * move_acc * self.scale.x
 	elif Input.is_action_pressed("ui_right"):
-		vel.x += delta * move_acc
+		vel.x += delta * move_acc * self.scale.x
 	else:
 		if (grounded and $AnimationPlayer.assigned_animation != "Stand"):
 			$AnimationPlayer.play("Stand")
@@ -92,16 +89,18 @@ func get_input(delta):
 		grounded = false
 		vel.y = -jump_speed
 #		if ($Camera2D.offset.y == 0):
-		set_pre_jump_y()
+		$Camera2D.set_pre_jump_y()
 	
 
 func on_touch_trap():
 	if (not self.dead):
 		self.dead = true
 		self.dead_timer = 0
+		$AnimationPlayer.play("DONT FEEL SO WELL (HUUUURT)")
+		vel.y = -400
+		vel.x *= -1
+		$Camera2D.set_pre_jump_y()
+		grounded = false
 
 func on_touch_fish():
 	$AnimationPlayer.play("Fish GET")
-
-func set_pre_jump_y():
-	pre_jump_y = position.y + $Camera2D.offset.y
