@@ -20,10 +20,10 @@ func _physics_process(delta):
 	if ($AnimationPlayer.current_animation == "Fish GET"):
 		return
 	
-	if dead:
+	if dead or Input.is_action_just_pressed("restart"):
 		dead_timer += delta
 #		print(dead_timer)
-		if (dead_timer >= 0.6):
+		if (dead_timer >= 0.6) or Input.is_action_just_pressed("restart"):
 			self.global_position = checkpoint
 			$Camera2D.pre_jump_y = checkpoint.y
 			self.grounded = false

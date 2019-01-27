@@ -430,6 +430,7 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="powerline" type="TileMap" parent="." index="7"]
 
+position = Vector2( -119.13, 0 )
 scale = Vector2( 4, 4 )
 mode = 0
 tile_set = ExtResource( 8 )
@@ -453,7 +454,6 @@ _sections_unfolded = [ "Cell", "Transform" ]
 [node name="Player" parent="." index="8" instance=ExtResource( 9 )]
 
 position = Vector2( 4316, -888 )
-collision_mask = 3
 
 [node name="boxes" type="Node2D" parent="." index="9"]
 
