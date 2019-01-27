@@ -17,11 +17,11 @@ func _ready():
 func _physics_process(delta):
 	get_input(delta)
 	
-	if grounded:
-		if not (test_move(self.global_transform, Vector2(0, 1))):
-			grounded = false
-	else:
-		vel.y += gravity * 3 * delta
+#	if grounded:
+#		if not (test_move(self.global_transform, Vector2(0, 1))):
+#			grounded = false
+#	else:
+#		vel.y += gravity * 3 * delta
 	
 	vel.x = clamp(vel.x, -move_speed, move_speed)
 
