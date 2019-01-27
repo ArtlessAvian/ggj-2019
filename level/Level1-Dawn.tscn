@@ -1,16 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/tileset/Harbor Tileset Complete.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/tileset/Park.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/tileset/Buildings TileSet1 v3.tres" type="TileSet" id=3]
 [ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=4]
-[ext_resource path="res://Assets/tileset/Tiles to Jump On - One Way.tres" type="TileSet" id=5]
+[ext_resource path="res://Assets/tileset/Tiles to Jump On.tres" type="TileSet" id=5]
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/Backdrops/City Background Dawn.png" type="Texture" id=7]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://level/GoToLevel2.gd" type="Script" id=9]
 [ext_resource path="res://Game/LevelElement/Crate.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/audio/bensound-adaytoremember.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,7 +21,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 11.3661, 10 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Harbor" type="TileMap" parent="." index="0"]
 
@@ -45,7 +44,7 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -327686, 10, 0, -393202, 10, 0, -393162, 10, 0, -131046, 1, 0 )
-_sections_unfolded = [ "Cell", "Collision", "Transform" ]
+_sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="park" type="TileMap" parent="." index="1"]
 
@@ -109,12 +108,12 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 2
+collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -589777, 4, 0, -458717, 5, 0, -458712, 4, 0, -327665, 15, 0, -196580, 3, 0, -196572, 1, 0, -196561, 1, 0, -196554, 13, 0, -196547, 12, 0, -131032, 0, 0, -9, 7, 0, -6, 7, 0, -65523, 9, 0, -65519, 14, 0, -65507, 0, 0, -65504, 1, 0, 65586, 10, 0, 65588, 10, 0 )
-_sections_unfolded = [ "Cell", "Collision", "Transform" ]
+_sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="things" type="TileMap" parent="." index="4"]
 
@@ -132,12 +131,12 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 2
+collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -65483, 18, 0, 27, 3, 0, 65567, 2, 0 )
-_sections_unfolded = [ "Cell", "Collision", "Transform" ]
+_sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Ground" type="TileMap" parent="." index="5"]
 
@@ -181,7 +180,6 @@ shape = SubResource( 1 )
 
 [node name="Wall2" type="StaticBody2D" parent="." index="7"]
 
-editor/display_folded = true
 position = Vector2( -1, -1 )
 scale = Vector2( 0.96875, 0.96875 )
 input_pickable = false
@@ -201,7 +199,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="8"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -256,15 +253,6 @@ shape = SubResource( 2 )
 
 position = Vector2( 3970, -90 )
 _sections_unfolded = [ "Visibility" ]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="12"]
-
-stream = ExtResource( 11 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
 
 [connection signal="body_entered" from="GoToLevel2" to="GoToLevel2" method="_on_GoToLevel2_body_entered"]
 

@@ -184,7 +184,7 @@ func _process(delta):
 	pass
 "
 
-[node name="Dog" type="KinematicBody2D"]
+[node name="Dog" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 0
@@ -275,6 +275,7 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 
 [node name="Label" type="Label" parent="." index="6"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
