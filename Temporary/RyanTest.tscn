@@ -29,7 +29,7 @@ extents = Vector2( 50.9689, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="RyanTest" type="Node2D"]
+[node name="RyanTest" type="Node2D" index="0"]
 
 position = Vector2( 0, -300 )
 _sections_unfolded = [ "Transform" ]
@@ -290,10 +290,10 @@ position = Vector2( 858, 237 )
 
 [node name="Crate" parent="." index="7" instance=ExtResource( 8 )]
 
-position = Vector2( -701, 233 )
+position = Vector2( -330, -19 )
 
 [node name="Crate2" parent="." index="8" instance=ExtResource( 8 )]
 
-position = Vector2( 935, 159 )
+position = Vector2( -294, 54 )
 
 
