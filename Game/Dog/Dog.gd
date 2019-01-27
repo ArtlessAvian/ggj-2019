@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const wander_speed = 100
-const move_speed = 250
+const move_speed = 220
 const move_acc = 1000
 var gravity = 640
 
