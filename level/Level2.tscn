@@ -15,7 +15,7 @@ extents = Vector2( 10, 840 )
 
 [node name="Level2" type="Node2D" index="0"]
 
-position = Vector2( 128, -832 )
+position = Vector2( 128, -800 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="City Background Midday" type="Sprite" parent="." index="0"]
@@ -146,7 +146,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Player" parent="." index="7" instance=ExtResource( 5 )]
 
-position = Vector2( 52, 452 )
+position = Vector2( 172, -440 )
 collision_mask = 3
 
 [node name="Dogs" type="Node2D" parent="." index="8"]
@@ -173,7 +173,6 @@ max_x = 982
 
 [node name="Front" type="TileMap" parent="." index="9"]
 
-visible = false
 scale = Vector2( 4, 4 )
 mode = 0
 tile_set = ExtResource( 2 )
