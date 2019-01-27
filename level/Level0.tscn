@@ -10,8 +10,6 @@
 
 [node name="Node2D" type="Node2D" index="0"]
 
-_sections_unfolded = [ "Transform" ]
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
 editor/display_folded = true
@@ -62,7 +60,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -917504, 4, 0 )
+tile_data = PoolIntArray( -917504, 4, 0, -720890, 3, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Park" type="TileMap" parent="." index="2"]
@@ -84,7 +82,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131107, 1, 0, -131103, 4, 0, -131097, 2, 0, -131076, 2, 0, -65584, 3, 0, -65583, 3, 0, -65580, 3, 0, -65577, 3, 0, -65574, 3, 0, -65570, 3, 0, -65567, 3, 0, -65564, 3, 0, -65559, 3, 0, -65556, 3, 0, -65553, 3, 0, -65550, 3, 0, -65547, 3, 0, 131045, 4, 0, 131046, 4, 0 )
+tile_data = PoolIntArray( -131107, 1, 0, -131103, 4, 0, -131097, 2, 0, -131076, 2, 0, -65584, 3, 0, -65583, 3, 0, -65580, 3, 0, -65577, 3, 0, -65574, 3, 0, -65570, 3, 0, -65567, 3, 0, -65564, 3, 0, -65559, 3, 0, -65556, 3, 0, -65553, 3, 0, -65550, 3, 0, -65547, 3, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Cityscape" type="TileMap" parent="." index="3"]
@@ -107,7 +105,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131073, 4, 0, 65488, 0, 0, 65489, 0, 0, 65490, 0, 0, 65491, 0, 0, 65492, 0, 0, 65493, 0, 0, 65494, 0, 0, 65495, 0, 0, 65496, 0, 0, 65497, 0, 0, 65498, 0, 0, 65499, 0, 0, 65500, 0, 0, 65501, 0, 0, 65502, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65508, 0, 0, 65509, 0, 0, 65510, 0, 0, 65511, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 2, 0, 65528, 1, 0, 65532, 1, 0, 0, 1, 0, 4, 1, 0 )
+tile_data = PoolIntArray( -131073, 4, 0, 65488, 0, 0, 65489, 0, 0, 65490, 0, 0, 65491, 0, 0, 65492, 0, 0, 65493, 0, 0, 65494, 0, 0, 65495, 0, 0, 65496, 0, 0, 65497, 0, 0, 65498, 0, 0, 65499, 0, 0, 65500, 0, 0, 65501, 0, 0, 65502, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65508, 0, 0, 65509, 0, 0, 65510, 0, 0, 65511, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 2, 0, 65528, 1, 0, 65532, 1, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Harbor" type="TileMap" parent="." index="4"]
@@ -158,10 +156,11 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="6"]
 
-editor/display_folded = true
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Player" parent="Sprite" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( -300, -90 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 
 
