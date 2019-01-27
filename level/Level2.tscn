@@ -16,12 +16,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 840 )
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 13.25 )
-
-[node name="Level2" type="Node2D" index="0"]
+[node name="Level2" type="Node2D"]
 
 position = Vector2( 128, -800 )
 _sections_unfolded = [ "Transform" ]
@@ -318,6 +313,7 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[connection signal="body_entered" from="ToLevel3" to="ToLevel3" method="_on_ToLevel3_body_entered"]
+position = Vector2( 185, -279 )
+
 
 
