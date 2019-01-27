@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Game/Dog/Dog.gd" type="Script" id=1]
 [ext_resource path="res://Game/Trap/GenericTrap.gd" type="Script" id=2]
@@ -102,7 +102,25 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=4]
 
-resource_name = "guard"
+resource_name = "Walk"
+length = 3.0
+loop = false
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("dogggggg:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=5]
+
 length = 1.0
 loop = true
 step = 0.1
@@ -131,22 +149,22 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 25, 27 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 20 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 400, 100 )
 
-[sub_resource type="GDScript" id=8]
+[sub_resource type="GDScript" id=9]
 
 script/source = "extends Label
 
@@ -166,7 +184,7 @@ func _process(delta):
 	pass
 "
 
-[node name="Dog" type="KinematicBody2D"]
+[node name="Dog" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 0
@@ -196,12 +214,13 @@ playback_speed = 1.0
 anims/Borf = SubResource( 1 )
 anims/Run = SubResource( 2 )
 anims/Stand = SubResource( 3 )
-anims/guard = SubResource( 4 )
+anims/Walk = SubResource( 4 )
+anims/guard = SubResource( 5 )
 blend_times = [  ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Trap" type="Area2D" parent="." index="3" groups=[
@@ -223,7 +242,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trap" index="0"]
 
 position = Vector2( 6, 3 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CatDetector" type="Area2D" parent="." index="4"]
@@ -242,7 +261,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatDetector" index="0"]
 
 position = Vector2( 0, -70 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="dogggggg" type="Sprite" parent="." index="5"]
@@ -252,11 +271,11 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 vframes = 3
 hframes = 4
-frame = 7
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 
 [node name="Label" type="Label" parent="." index="6"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -274,7 +293,7 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = SubResource( 8 )
+script = SubResource( 9 )
 
 [node name="0" type="AudioStreamPlayer2D" parent="." index="7"]
 
