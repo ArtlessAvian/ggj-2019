@@ -1,0 +1,48 @@
+{
+	"textures": [
+		{
+			"image": "Water.png",
+			"size": {
+				"w": 144,
+				"h": 48
+			},
+			"sprites": [
+				{
+					"filename": "liquidWaterTop.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 70,
+						"h": 46
+					},
+					"margin": {
+						"x": 0,
+						"y": 24,
+						"w": 0,
+						"h": 24
+					}
+				},
+				{
+					"filename": "liquidWaterTop_mid.png",
+					"region": {
+						"x": 73,
+						"y": 1,
+						"w": 70,
+						"h": 46
+					},
+					"margin": {
+						"x": 0,
+						"y": 24,
+						"w": 0,
+						"h": 24
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:6ed1084476d8e7b3a7f56704be6e556e:2efdaca657a8e23f668e762c79aa9eae:a552e47ecfdd9c3521206a56ef8c2362$"
+	}
+}
