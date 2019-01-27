@@ -166,7 +166,6 @@ extents = Vector2( 10, 10 )
 
 [node name="Health Centre" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 80, 80, 160, 160 )
@@ -627,7 +626,6 @@ shape = SubResource( 31 )
 
 [node name="Train Station" type="Sprite" parent="." index="12"]
 
-editor/display_folded = true
 position = Vector2( 112, 183 )
 texture = ExtResource( 1 )
 region_enabled = true
