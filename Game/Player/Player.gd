@@ -16,6 +16,9 @@ func _ready():
 	checkpoint = self.global_position
 
 func _physics_process(delta):
+	if ($AnimationPlayer.current_animation == "Fish GET"):
+		return
+	
 	if dead:
 		dead_timer += delta
 #		print(dead_timer)
@@ -59,6 +62,7 @@ func _physics_process(delta):
 	self.move_and_slide(vel, Vector2(0, -1))
 	if (vel.x != 0):
 		$Sprite.flip_h = vel.x < 0
+	$Camera2D.drag_margin_top = 0 if grounded else 1
 
 func get_input(delta):
 	
@@ -83,3 +87,6 @@ func on_touch_trap():
 	if (not self.dead):
 		self.dead = true
 		self.dead_timer = 0
+
+func on_touch_fish():
+	$AnimationPlayer.play("Fish GET")
