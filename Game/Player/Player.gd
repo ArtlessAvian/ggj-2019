@@ -90,7 +90,7 @@ func get_input(delta):
 		if (grounded and $AnimationPlayer.assigned_animation != "Stand"):
 			$AnimationPlayer.play("Stand")
 		vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/10)
-		if (Input.is_action_just_pressed("ui_down")):
+		if (Input.is_action_pressed("ui_down")):
 			$AnimationPlayer.advance(4)
 		if (Input.is_action_just_released("ui_down")):
 			$AnimationPlayer.seek(0)
