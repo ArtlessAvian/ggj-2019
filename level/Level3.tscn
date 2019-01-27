@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/tileset/Buildings TileSet1 v3.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/tileset/Harbor Tileset v2.tres" type="TileSet" id=3]
 [ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=4]
 [ext_resource path="res://Assets/tileset/Tiles to Jump On.tres" type="TileSet" id=5]
-[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/tileset/PowerLine.tres" type="TileSet" id=6]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/LevelElement/Crate.tscn" type="PackedScene" id=8]
 
 [node name="Level3" type="Node2D" index="0"]
 
@@ -50,7 +52,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -983021, 4, 0, -851934, 1, 0, -524281, 2, 0, -393190, 6, 0 )
+tile_data = PoolIntArray( -983011, 4, 0, -983004, 4, 0, -851950, 1, 0, -524281, 2, 0, -393190, 6, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="street2" type="TileMap" parent="." index="2"]
@@ -94,7 +96,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -720874, 1, 0, -524272, 15, 0, -524259, 15, 0, -393180, 1, 0, -393173, 13, 0, -393166, 12, 0, -262100, 14, 0, -131047, 10, 0 )
+tile_data = PoolIntArray( -720874, 1, 0, -393180, 1, 0, -393173, 13, 0, -393166, 12, 0, -262100, 14, 0, -131047, 10, 0 )
 _sections_unfolded = [ "Cell", "Occluder", "Transform" ]
 
 [node name="streetEle2" type="TileMap" parent="." index="4"]
@@ -119,8 +121,46 @@ format = 1
 tile_data = PoolIntArray( -262139, 1, 0, -196606, 8, 0, -196577, 3, 0, -196554, 14, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="Player" parent="." index="5" instance=ExtResource( 6 )]
+[node name="powerline" type="TileMap" parent="." index="5"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -982999, 0, 0, -982986, 0, 0, -524268, 1, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Player" parent="." index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 236, -624 )
+
+[node name="Node2D" type="Node2D" parent="." index="7"]
+
+editor/display_folded = true
+
+[node name="Crate" parent="Node2D" index="0" instance=ExtResource( 8 )]
+
+position = Vector2( 2368, -524 )
+
+[node name="Crate2" parent="Node2D" index="1" instance=ExtResource( 8 )]
+
+position = Vector2( 2364, -720 )
+
+[node name="Crate3" parent="Node2D" index="2" instance=ExtResource( 8 )]
+
+position = Vector2( 2072, -528 )
 
 
