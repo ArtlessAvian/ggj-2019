@@ -290,10 +290,10 @@ position = Vector2( 858, 237 )
 
 [node name="Crate" parent="." index="7" instance=ExtResource( 8 )]
 
-position = Vector2( -701, 233 )
+position = Vector2( -330, -19 )
 
 [node name="Crate2" parent="." index="8" instance=ExtResource( 8 )]
 
-position = Vector2( 935, 159 )
+position = Vector2( -294, 54 )
 
 
