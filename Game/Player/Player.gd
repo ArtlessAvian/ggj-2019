@@ -62,6 +62,7 @@ func _physics_process(delta):
 	self.move_and_slide(vel, Vector2(0, -1))
 	if (vel.x != 0):
 		$Sprite.flip_h = vel.x < 0
+	$Camera2D.drag_margin_top = 0 if grounded else 1
 
 func get_input(delta):
 	
