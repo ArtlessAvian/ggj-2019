@@ -258,4 +258,5 @@ extents = Vector2( 62, 24 )
 15/occluder_offset = Vector2( 16, 8 )
 15/navigation_offset = Vector2( 16, 8 )
 15/shapes = [  ]
+_sections_unfolded = [ "0" ]
 
