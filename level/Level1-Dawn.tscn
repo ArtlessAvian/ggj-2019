@@ -7,9 +7,9 @@
 [ext_resource path="res://Assets/tileset/Tiles to Jump On.tres" type="TileSet" id=5]
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/Backdrops/City Background Dawn.png" type="Texture" id=7]
-[ext_resource path="res://level/GoToLevel2.gd" type="Script" id=8]
-[ext_resource path="res://Game/LevelElement/Crate.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://level/GoToLevel2.gd" type="Script" id=9]
+[ext_resource path="res://Game/LevelElement/Crate.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -180,7 +180,6 @@ shape = SubResource( 1 )
 
 [node name="Wall2" type="StaticBody2D" parent="." index="7"]
 
-editor/display_folded = true
 position = Vector2( -1, -1 )
 scale = Vector2( 0.96875, 0.96875 )
 input_pickable = false
@@ -193,13 +192,13 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" index="0"]
 
-position = Vector2( 5460, -460 )
+position = Vector2( 5650, -460 )
 scale = Vector2( 2.03846, 40.5 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="8"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -227,7 +226,11 @@ texture = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="1"]
 
-[node name="GoToLevel2" type="Area2D" parent="." index="9"]
+[node name="Player" parent="." index="9" instance=ExtResource( 8 )]
+
+position = Vector2( -390, -80 )
+
+[node name="GoToLevel2" type="Area2D" parent="." index="10"]
 
 editor/display_folded = true
 position = Vector2( 140, -10 )
@@ -238,7 +241,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoToLevel2" index="0"]
 
@@ -246,13 +249,10 @@ position = Vector2( 4300, -590 )
 scale = Vector2( 3.51923, 3.51923 )
 shape = SubResource( 2 )
 
-[node name="Crate" parent="." index="10" instance=ExtResource( 9 )]
+[node name="Crate" parent="." index="11" instance=ExtResource( 10 )]
 
 position = Vector2( 3970, -90 )
-
-[node name="Player" parent="." index="11" instance=ExtResource( 10 )]
-
-position = Vector2( -390, -80 )
+_sections_unfolded = [ "Visibility" ]
 
 [connection signal="body_entered" from="GoToLevel2" to="GoToLevel2" method="_on_GoToLevel2_body_entered"]
 
