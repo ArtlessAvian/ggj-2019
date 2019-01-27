@@ -22,7 +22,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11 ]
 }
 
-[node name="Trap" instance=ExtResource( 1 )]
+[node name="Trap" index="0" instance=ExtResource( 1 )]
 
 [node name="Sprite" parent="." index="0"]
 
