@@ -71,7 +71,10 @@ func _physics_process(delta):
 	self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
 	if (vel.x != 0):
 		$Sprite.flip_h = vel.x < 0
-
+		
+	for collision in range(get_slide_count()):
+		if ("Pushable" in get_slide_collision(collision).collider.get_groups()):
+			get_slide_collision(collision).collider.move_and_collide(Vector2(sign(vel.x) * 1, 0))
 
 
 func get_input(delta):
