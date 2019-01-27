@@ -23,18 +23,16 @@ func _physics_process(delta):
 	if dead:
 		dead_timer += delta
 #		print(dead_timer)
-		if (dead_timer >= 0.6):
+		if (dead_timer >= 1):
 			self.global_position = checkpoint
 			$Camera2D.pre_jump_y = checkpoint.y
 			self.grounded = false
 			dead = false
-			self.modulate.a = 1
 			vel *= 0
-		else:
-			self.modulate.a = 1 - dead_timer / 0.5
-			vel.y += 10
-			self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
-			return
+		
+		vel.y += 10
+		self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
+		return
 	
 	else:
 		get_input(delta)
@@ -72,8 +70,6 @@ func _physics_process(delta):
 	if (vel.x != 0):
 		$Sprite.flip_h = vel.x < 0
 
-
-
 func get_input(delta):
 	
 	if ((Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right")) and grounded):
@@ -95,7 +91,7 @@ func get_input(delta):
 #		if ($Camera2D.offset.y == 0):
 		$Camera2D.set_pre_jump_y()
 	
-#
+
 func on_touch_trap():
 	if (not self.dead):
 		self.dead = true
