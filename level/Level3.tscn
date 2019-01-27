@@ -1,12 +1,20 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
 
-[node name="Level3" type="Node2D"]
+[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/tileset/Buildings TileSet1 v3.tres" type="TileSet" id=2]
+[ext_resource path="res://Assets/tileset/Harbor Tileset v2.tres" type="TileSet" id=3]
+[ext_resource path="res://Assets/tileset/Scenery.tres" type="TileSet" id=4]
+[ext_resource path="res://Assets/tileset/Tiles to Jump On.tres" type="TileSet" id=5]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=6]
 
-[node name="TileMap" type="TileMap" parent="." index="0"]
+[node name="Level3" type="Node2D" index="0"]
 
+[node name="street" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 4, 4 )
 mode = 0
-tile_set = null
-cell_size = Vector2( 64, 64 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 cell_half_offset = 2
@@ -20,6 +28,99 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray(  )
+tile_data = PoolIntArray( -65536, 1, 0, -65532, 1, 0, -65528, 1, 0, -65524, 1, 0, -65520, 1, 0, -65516, 1, 0, -65512, 1, 0, -65508, 1, 0, -65504, 1, 0, -65500, 1, 0, -65496, 1, 0, -65492, 1, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="building" type="TileMap" parent="." index="1"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -983021, 4, 0, -851934, 1, 0, -524281, 2, 0, -393190, 6, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="street2" type="TileMap" parent="." index="2"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -262111, 1, 0, -131024, 3, 0, -131022, 3, 0, -131020, 3, 0, -131018, 3, 0, -131016, 3, 0, -131014, 3, 0, -131012, 3, 0, -131010, 3, 0, -131008, 3, 0, -131006, 3, 0, -131004, 3, 0, -131002, 3, 0, -131000, 3, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="streetElements" type="TileMap" parent="." index="3"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -720874, 1, 0, -524272, 15, 0, -524259, 15, 0, -393180, 1, 0, -393173, 13, 0, -393166, 12, 0, -262100, 14, 0, -131047, 10, 0 )
+_sections_unfolded = [ "Cell", "Occluder", "Transform" ]
+
+[node name="streetEle2" type="TileMap" parent="." index="4"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -262139, 1, 0, -196606, 8, 0, -196577, 3, 0, -196554, 14, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Player" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 236, -624 )
 
 
