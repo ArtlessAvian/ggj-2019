@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Backdrops/City Background Dusk.png" type="Texture" id=1]
-[ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=2]
+[ext_resource path="res://Assets/tileset/Buildings TileSet1 v4.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/tileset/Park.tres" type="TileSet" id=3]
 [ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=4]
 [ext_resource path="res://Assets/tileset/Harbor Tileset Complete.tres" type="TileSet" id=5]
@@ -62,12 +62,12 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -917504, 4, 0, -720890, 3, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
+_sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 [node name="Park" type="TileMap" parent="." index="2"]
 
@@ -111,8 +111,8 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131073, 4, 0, 65480, 0, 0, 65481, 0, 0, 65482, 0, 0, 65483, 0, 0, 65484, 0, 0, 65485, 0, 0, 65486, 0, 0, 65487, 0, 0, 65488, 0, 0, 65489, 0, 0, 65490, 0, 0, 65491, 0, 0, 65492, 0, 0, 65493, 0, 0, 65494, 0, 0, 65495, 0, 0, 65496, 0, 0, 65497, 0, 0, 65498, 0, 0, 65499, 0, 0, 65500, 0, 0, 65501, 0, 0, 65502, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65508, 0, 0, 65509, 0, 0, 65510, 0, 0, 65511, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 2, 0, 65528, 1, 0, 65532, 1, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0 )
-_sections_unfolded = [ "Cell", "Transform" ]
+tile_data = PoolIntArray( -131073, 4, 0, 65488, 0, 0, 65489, 0, 0, 65490, 0, 0, 65491, 0, 0, 65492, 0, 0, 65493, 0, 0, 65494, 0, 0, 65495, 0, 0, 65496, 0, 0, 65497, 0, 0, 65498, 0, 0, 65499, 0, 0, 65500, 0, 0, 65501, 0, 0, 65502, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65508, 0, 0, 65509, 0, 0, 65510, 0, 0, 65511, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 65520, 0, 0, 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65525, 2, 0, 65528, 1, 0, 65532, 1, 0, 0, 1, 0, 4, 1, 0, 8, 1, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Transform" ]
 
 [node name="Harbor" type="TileMap" parent="." index="4"]
 
