@@ -90,13 +90,22 @@ func get_input(delta):
 		if (grounded and $AnimationPlayer.assigned_animation != "Stand"):
 			$AnimationPlayer.play("Stand")
 		vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/10)
+		if (Input.is_action_just_pressed("ui_down")):
+			$AnimationPlayer.advance(4)
+		if (Input.is_action_just_released("ui_down")):
+			$AnimationPlayer.seek(0)
+	
+	self.set_collision_mask_bit(1, not (Input.is_action_pressed("ui_down") and Input.is_action_pressed("ui_jump")))
 	
 	if Input.is_action_just_pressed("ui_jump") and grounded:
 		$AnimationPlayer.play("Jump")
 		grounded = false
-		vel.y = -jump_speed
-#		if ($Camera2D.offset.y == 0):
 		$Camera2D.set_pre_jump_y()
+		if not Input.is_action_pressed("ui_down"):
+			vel.y = -jump_speed
+		else:
+			vel.y = -jump_speed * 0.2
+#		if ($Camera2D.offset.y == 0):
 	
 #
 func on_touch_trap():
