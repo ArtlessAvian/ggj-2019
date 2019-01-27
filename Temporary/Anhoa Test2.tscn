@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=1]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Buildings" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = null
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+
+[node name="City Tileset" type="TileMap" parent="." index="1"]
+
+scale = Vector2( 2, 2 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 19, 5, 0, 33, 4, 0, 34, 4, 0, 35, 4, 0, 36, 4, 0, 65546, 7, 0, 65548, 7, 0, 65554, 5, 0, 65555, 5, 0, 65559, 5, 0, 65563, 3, 0, 65566, 3, 0, 65575, 6, 0, 65578, 6, 0, 131089, 5, 0, 131090, 5, 0, 131091, 5, 0, 131094, 5, 0, 131095, 5, 0, 131096, 5, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 2, 0, 196614, 1, 0, 196618, 1, 0, 196622, 1, 0, 196626, 1, 0, 196630, 1, 0, 196634, 1, 0, 196638, 1, 0, 196642, 1, 0, 196646, 1, 0, 196650, 1, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Player" parent="City Tileset" index="0" instance=ExtResource( 2 )]
+
+
