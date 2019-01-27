@@ -24,6 +24,12 @@ func _physics_process(delta):
 #		vel.y += gravity * 3 * delta
 	
 	vel.x = clamp(vel.x, -move_speed, move_speed)
+	if position.x < min_x + 50 and vel.x < 0:
+		vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/30)
+		self.position.x = max(min_x, self.position.x)
+	elif position.x > max_x - 50 and vel.x > 0:
+		vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/30)
+		self.position.x = min(max_x, self.position.x)
 
 	self.move_and_slide(vel, Vector2(0, -1))
 
@@ -84,18 +90,20 @@ func get_input(delta):
 			if $AnimationPlayer.assigned_animation != "guard" and $AnimationPlayer.assigned_animation != "Borf":
 				$AnimationPlayer.play("guard")
 			else:
-				if randi() % 300 == 0:
+				if $AnimationPlayer.assigned_animation == "guard" and randi() % 300 == 0:
 					$AnimationPlayer.play("Borf")
 					$AnimationPlayer.queue("guard")
 		elif $AnimationPlayer.assigned_animation != "Run":
 			$AnimationPlayer.play("Run")
 		
 		if position.x < min_x + 50 and cat.position.x - self.position.x < 0:
-			vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/30)
-			self.position.x = max(min_x, self.position.x)
+			pass
+#			vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/30)
+#			self.position.x = max(min_x, self.position.x)
 		elif position.x > max_x - 50 and cat.position.x - self.position.x > 0:
-			vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/30)
-			self.position.x = min(max_x, self.position.x)
+			pass
+#			vel.x -= sign(vel.x) * min(abs(vel.x), move_speed/30)
+#			self.position.x = min(max_x, self.position.x)
 		else:
 			vel.x += sign(cat.position.x - self.position.x) * move_acc * delta
 		$dogggggg.flip_h = cat.position.x - self.position.x < 0
