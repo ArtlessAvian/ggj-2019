@@ -4,157 +4,157 @@
 [ext_resource path="res://Assets/tileset/pixil-frame-0 (1).png" type="Texture" id=2]
 [ext_resource path="res://Assets/tileset/pixil-frame-0.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15.9009, 4 )
-
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.7745, 4.03536 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.06728, 4.40392 )
-
-[sub_resource type="RectangleShape2D" id=7]
-
-custom_solver_bias = 0.0
-extents = Vector2( 6.79088, 4.26571 )
-
-[sub_resource type="RectangleShape2D" id=8]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.5325, 3.10837 )
-
-[sub_resource type="RectangleShape2D" id=9]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.1008, 6.84008 )
-
-[sub_resource type="RectangleShape2D" id=10]
-
-custom_solver_bias = 0.0
-extents = Vector2( 13.9452, 18.9012 )
-
-[sub_resource type="RectangleShape2D" id=11]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.8062, 2.0565 )
-
-[sub_resource type="RectangleShape2D" id=12]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.8891, 1.87321 )
-
-[sub_resource type="RectangleShape2D" id=13]
-
-custom_solver_bias = 0.0
-extents = Vector2( 6.34443, 5.03368 )
-
-[sub_resource type="RectangleShape2D" id=14]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.22883, 4.90417 )
-
-[sub_resource type="RectangleShape2D" id=15]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.63042, 4.75133 )
-
-[sub_resource type="RectangleShape2D" id=16]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.26247, 4.86163 )
-
-[sub_resource type="RectangleShape2D" id=17]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 3.05365 )
-
-[sub_resource type="RectangleShape2D" id=18]
-
-custom_solver_bias = 0.0
-extents = Vector2( 4.12277, 2.7367 )
-
-[sub_resource type="RectangleShape2D" id=19]
-
-custom_solver_bias = 0.0
-extents = Vector2( 15.9154, 1.91734 )
-
-[sub_resource type="RectangleShape2D" id=20]
-
-custom_solver_bias = 0.0
-extents = Vector2( 8.23364, 1.98678 )
-
-[sub_resource type="RectangleShape2D" id=21]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10.8327, 12.936 )
-
-[sub_resource type="RectangleShape2D" id=22]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.26813, 4.17983 )
-
-[sub_resource type="RectangleShape2D" id=23]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.16553, 4.13768 )
-
-[sub_resource type="RectangleShape2D" id=27]
-
-custom_solver_bias = 0.0
-extents = Vector2( 8.18616, 9.72387 )
-
-[sub_resource type="RectangleShape2D" id=24]
-
-custom_solver_bias = 0.0
-extents = Vector2( 4, 16 )
-
-[sub_resource type="RectangleShape2D" id=26]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.22766, 4.06397 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 24, 4 )
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 12, 4 )
+extents = Vector2( 15.6915, 4.05888 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8, 12 )
+extents = Vector2( 15.5325, 3.10837 )
 
-[sub_resource type="RectangleShape2D" id=25]
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.1008, 6.84008 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.9452, 18.9012 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.8062, 2.0565 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.8891, 1.87321 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.34443, 5.03368 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.22883, 4.90417 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.63042, 4.75133 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.26247, 4.86163 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 3.05365 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.12277, 2.7367 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+custom_solver_bias = 0.0
+extents = Vector2( 15.9154, 1.91734 )
+
+[sub_resource type="RectangleShape2D" id=14]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.23364, 1.98678 )
+
+[sub_resource type="RectangleShape2D" id=15]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.8327, 12.936 )
+
+[sub_resource type="RectangleShape2D" id=16]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.26813, 4.17983 )
+
+[sub_resource type="RectangleShape2D" id=17]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.16553, 4.13768 )
+
+[sub_resource type="RectangleShape2D" id=18]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.18616, 9.72387 )
+
+[sub_resource type="RectangleShape2D" id=19]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4, 16 )
+
+[sub_resource type="RectangleShape2D" id=20]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.22766, 4.06397 )
+
+[sub_resource type="RectangleShape2D" id=21]
 
 custom_solver_bias = 0.0
 extents = Vector2( 14.3875, 1.582 )
 
-[sub_resource type="RectangleShape2D" id=30]
+[sub_resource type="RectangleShape2D" id=22]
 
 custom_solver_bias = 0.0
-extents = Vector2( 11.4015, 4.772 )
+extents = Vector2( 24, 4 )
 
-[sub_resource type="RectangleShape2D" id=31]
+[sub_resource type="RectangleShape2D" id=23]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15.6915, 4.05888 )
+extents = Vector2( 8, 12 )
+
+[sub_resource type="RectangleShape2D" id=24]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24, 4 )
+
+[sub_resource type="RectangleShape2D" id=25]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12, 4 )
+
+[sub_resource type="RectangleShape2D" id=26]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 12 )
+
+[sub_resource type="RectangleShape2D" id=27]
+
+custom_solver_bias = 0.0
+extents = Vector2( 14.3875, 1.582 )
 
 [sub_resource type="RectangleShape2D" id=28]
 
 custom_solver_bias = 0.0
 extents = Vector2( 4, 16 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=29]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.1074, 12.8426 )
+
+[sub_resource type="RectangleShape2D" id=30]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4, 16 )
+
+[sub_resource type="RectangleShape2D" id=31]
 
 custom_solver_bias = 0.0
 extents = Vector2( 13.1074, 12.8426 )
@@ -181,7 +181,7 @@ extents = Vector2( 13.1074, 12.8426 )
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 29 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 28 )
 } ]
 2/name = "Tile Set 3"
@@ -222,7 +222,7 @@ extents = Vector2( 13.1074, 12.8426 )
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 31 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 21.0467, 18.9309 )
 } ]
 6/name = "Tile Set 8"
@@ -272,17 +272,17 @@ extents = Vector2( 13.1074, 12.8426 )
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32.0461, 21.943 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 6 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 55.726, 27.3793 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 7 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 7.9054, 27.5635 )
 } ]
 11/name = "Tile Set 13"
@@ -296,7 +296,7 @@ extents = Vector2( 13.1074, 12.8426 )
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 8 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 11.0543 )
 } ]
 12/name = "Tile Set 15"
@@ -310,7 +310,7 @@ extents = Vector2( 13.1074, 12.8426 )
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 9 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 8 )
 } ]
 13/name = "Tile Set 16"
@@ -324,7 +324,7 @@ extents = Vector2( 13.1074, 12.8426 )
 13/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 10 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16.0945, 37.2281 )
 } ]
 14/name = "Tile Set 17"
@@ -338,7 +338,7 @@ extents = Vector2( 13.1074, 12.8426 )
 14/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 11 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 15.8597, 23.3732 )
 } ]
 15/name = "Tile Set 18"
@@ -352,7 +352,7 @@ extents = Vector2( 13.1074, 12.8426 )
 15/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 12 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 15.9055, 3.93786 )
 } ]
 16/name = "Tile Set 19"
@@ -366,7 +366,7 @@ extents = Vector2( 13.1074, 12.8426 )
 16/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 13 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 7.88687, 10.9978 )
 } ]
 17/name = "Tile Set 20"
@@ -380,7 +380,7 @@ extents = Vector2( 13.1074, 12.8426 )
 17/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 14 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 7.93056, 19.4035 )
 } ]
 18/name = "Tile Set 21"
@@ -394,7 +394,7 @@ extents = Vector2( 13.1074, 12.8426 )
 18/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 15 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 7.68663, 18.9566 )
 } ]
 19/name = "Tile Set 22"
@@ -408,7 +408,7 @@ extents = Vector2( 13.1074, 12.8426 )
 19/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 16 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8.20833, 19.4998 )
 } ]
 20/name = "Tile Set 23"
@@ -422,7 +422,7 @@ extents = Vector2( 13.1074, 12.8426 )
 20/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 17 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 27.0709, 18.7059 )
 } ]
 21/name = "Tile Set 24"
@@ -436,7 +436,7 @@ extents = Vector2( 13.1074, 12.8426 )
 21/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 18 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 18.7083, 18.0415 )
 } ]
 22/name = "Tile Set 25"
@@ -450,7 +450,7 @@ extents = Vector2( 13.1074, 12.8426 )
 22/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 19 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 15.9306, 10.0833 )
 } ]
 23/name = "Tile Set 26"
@@ -464,7 +464,7 @@ extents = Vector2( 13.1074, 12.8426 )
 23/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 20 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8.13885, 9.80551 )
 } ]
 24/name = "Tile Set 27"
@@ -478,7 +478,7 @@ extents = Vector2( 13.1074, 12.8426 )
 24/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 21 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 17.417, 18.7396 )
 } ]
 25/name = "Tile Set 28"
@@ -501,7 +501,7 @@ extents = Vector2( 13.1074, 12.8426 )
 26/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 22 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
 } ]
 27/name = "Tile Set 30"
@@ -515,7 +515,7 @@ extents = Vector2( 13.1074, 12.8426 )
 27/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 23 ),
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
 } ]
 28/name = "Tile Set 14"
@@ -529,7 +529,7 @@ extents = Vector2( 13.1074, 12.8426 )
 28/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 27 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 7.83032, 14.4322 )
 } ]
 29/name = "Tile Set 4"
@@ -552,7 +552,7 @@ extents = Vector2( 13.1074, 12.8426 )
 30/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 24 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 4, 16 )
 } ]
 31/name = "Tile Set 32"
@@ -566,7 +566,7 @@ extents = Vector2( 13.1074, 12.8426 )
 31/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 26 ),
+"shape": SubResource( 23 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, 8 )
 } ]
 32/name = "Tile Set 35"
@@ -607,7 +607,7 @@ extents = Vector2( 13.1074, 12.8426 )
 35/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 4 ),
+"shape": SubResource( 24 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 24, 12 )
 } ]
 36/name = "Tile Set 40"
@@ -621,7 +621,7 @@ extents = Vector2( 13.1074, 12.8426 )
 36/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 3 ),
+"shape": SubResource( 25 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 20 )
 } ]
 37/name = "Tile Set 41"
@@ -635,7 +635,7 @@ extents = Vector2( 13.1074, 12.8426 )
 37/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 26 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, 20 )
 } ]
 38/name = "Tile Set 42"
@@ -703,7 +703,7 @@ extents = Vector2( 13.1074, 12.8426 )
 44/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 25 ),
+"shape": SubResource( 27 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 15.8618, 4 )
 } ]
 45/name = "Tile Set 34"
@@ -717,7 +717,7 @@ extents = Vector2( 13.1074, 12.8426 )
 45/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 30 ),
+"shape": SubResource( 28 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 15.5916, 26.8376 )
 } ]
 46/name = "Tile Set 47"
@@ -731,7 +731,7 @@ extents = Vector2( 13.1074, 12.8426 )
 46/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 31 ),
+"shape": SubResource( 29 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 16, 4 )
 } ]
 47/name = "Sprite"
@@ -763,7 +763,8 @@ extents = Vector2( 13.1074, 12.8426 )
 49/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 28 ),
+"shape": SubResource( 30 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 8, 16 )
 } ]
+_sections_unfolded = [ "30", "46" ]
 
