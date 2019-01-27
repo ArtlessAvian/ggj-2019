@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=1]
+[ext_resource path="res://Game/LevelElement/Crate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -851968, 1, 0, -655357, 1, 0, -458752, 1, 0, -262141, 1, 0, -65536, 1, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Crate" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 173.805, -943.354 )
+
+[node name="Crate2" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 179.878, -1134.71 )
+
+[node name="Player" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 61.2167, -1110.06 )
+
+
