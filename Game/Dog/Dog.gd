@@ -75,7 +75,7 @@ func get_input(delta):
 
 	if (my_state == "PatrolLeft" or my_state == "PatrolRight"):
 		if $AnimationPlayer.assigned_animation != "Walk":
-			$AnimationPlayer.play("")
+			$AnimationPlayer.play("Walk")
 		vel.x = 100 * (-1 if my_state == "PatrolLeft" else 1)
 		$dogggggg.flip_h = vel.x < 0
 	elif (my_state == "Bark"):
