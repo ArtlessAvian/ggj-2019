@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/tileset/Buildings TileSet1 v2.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/tileset/City TileSet v2.tres" type="TileSet" id=2]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Buildings" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -720893, 3, 0, -655349, 0, 0, -458711, 2, 0, -262074, 12, 0, -65525, 7, 0, -65520, 7, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="City" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -196573, 4, 0, -196572, 4, 0, -196571, 4, 0, -196570, 4, 0, -196549, 5, 0, -131072, 3, 0, -131066, 3, 0, -131046, 7, 0, -131044, 6, 0, -131042, 7, 0, -131033, 3, 0, -131030, 3, 0, -131027, 3, 0, -131024, 3, 0, -131021, 3, 0, -131014, 5, 0, -131013, 5, 0, -131011, 6, 0, -131007, 6, 0, -131005, 6, 0, -65479, 5, 0, -65478, 5, 0, -65477, 5, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 2, 0, 25, 1, 0, 29, 1, 0, 33, 1, 0, 37, 1, 0, 41, 1, 0, 45, 1, 0, 49, 1, 0, 53, 1, 0, 57, 1, 0, 61, 1, 0, 65, 1, 0, 69, 1, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 69.9097, -108.837 )
+scale = Vector2( 0.3, 0.3 )
+
+

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SHIPPING_DOCKS_AREA transparent.png-0ffa32e223faeaa0d1a6e45920e83c04.stex"
+path="res://.import/dog.png-bf621d5f4a46b55b7277e51ea65cd75e.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/SHIPPING_DOCKS_AREA transparent.png"
-dest_files=[ "res://.import/SHIPPING_DOCKS_AREA transparent.png-0ffa32e223faeaa0d1a6e45920e83c04.stex" ]
+source_file="res://Assets/dog2/dog.png"
+dest_files=[ "res://.import/dog.png-bf621d5f4a46b55b7277e51ea65cd75e.stex" ]
 
 [params]
 
