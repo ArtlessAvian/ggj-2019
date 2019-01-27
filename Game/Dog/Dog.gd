@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const wander_speed = 100
-const move_speed = 300
+const move_speed = 250
 const move_acc = 1000
 var gravity = 640
 
@@ -58,6 +58,7 @@ func get_input(delta):
 			timer = 1
 			$dogggggg.flip_h = $RayCast2D.cast_to.x < 0
 			$AnimationPlayer.play("Borf")
+			$AnimationPlayer.queue("guard")
 			
 	if timer <= 0:
 		if (my_state == "Bark"):
@@ -80,8 +81,12 @@ func get_input(delta):
 #		print(timer % 1)
 	elif (my_state == "Chase"):
 		if (position.x < min_x + 50 or position.x > max_x - 50):
-			if $AnimationPlayer.assigned_animation != "guard":
+			if $AnimationPlayer.assigned_animation != "guard" and $AnimationPlayer.assigned_animation != "Borf":
 				$AnimationPlayer.play("guard")
+			else:
+				if randi() % 300 == 0:
+					$AnimationPlayer.play("Borf")
+					$AnimationPlayer.queue("guard")
 		elif $AnimationPlayer.assigned_animation != "Run":
 			$AnimationPlayer.play("Run")
 		
