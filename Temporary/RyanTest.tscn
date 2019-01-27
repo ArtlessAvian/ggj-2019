@@ -286,7 +286,9 @@ position = Vector2( 250.394, 163.234 )
 
 [node name="Dog" parent="." index="6" instance=ExtResource( 7 )]
 
-position = Vector2( 858, 237 )
+position = Vector2( 377, 259 )
+min_x = 300
+max_x = 700
 
 [node name="Crate" parent="." index="7" instance=ExtResource( 8 )]
 
