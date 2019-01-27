@@ -3,6 +3,7 @@ extends KinematicBody2D
 const wander_speed = 100
 const move_speed = 300
 const move_acc = 1000
+var gravity = 640
 
 export (int) var min_x = -100
 export (int) var max_x = 100
@@ -15,6 +16,12 @@ func _ready():
 
 func _physics_process(delta):
 	get_input(delta)
+	
+#	if grounded:
+#		if not (test_move(self.global_transform, Vector2(0, 1))):
+#			grounded = false
+#	else:
+#		vel.y += gravity * 3 * delta
 	
 	vel.x = clamp(vel.x, -move_speed, move_speed)
 
