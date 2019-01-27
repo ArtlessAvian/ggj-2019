@@ -92,7 +92,7 @@ extents = Vector2( 8.23364, 1.98678 )
 custom_solver_bias = 0.0
 extents = Vector2( 10.8327, 12.936 )
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=26]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7.26813, 4.17983 )
@@ -105,7 +105,7 @@ extents = Vector2( 7.16553, 4.13768 )
 [sub_resource type="RectangleShape2D" id=22]
 
 custom_solver_bias = 0.0
-extents = Vector2( 14.24, 4.46582 )
+extents = Vector2( 4, 16 )
 
 [sub_resource type="RectangleShape2D" id=23]
 
@@ -122,7 +122,7 @@ extents = Vector2( 7.22766, 4.06397 )
 custom_solver_bias = 0.0
 extents = Vector2( 8.18616, 9.72387 )
 
-[node name="InsideTileSet" type="Node2D" index="0"]
+[node name="InsideTileSet" type="Node2D"]
 
 [node name="Tile Set 1" type="Sprite" parent="." index="0"]
 
@@ -702,7 +702,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile Set 29/StaticBody2D" index="0"]
 
-shape = SubResource( 20 )
+shape = SubResource( 26 )
 
 [node name="Tile Set 30" type="Sprite" parent="." index="27"]
 
@@ -733,10 +733,10 @@ shape = SubResource( 21 )
 [node name="Tile Set 31" type="Sprite" parent="." index="28"]
 
 editor/display_folded = true
-position = Vector2( 387.813, 96.2737 )
+position = Vector2( -36, 0 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 722, 267, 40, 24 )
+region_rect = Rect2( 650, 19, 8, 32 )
 _sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -754,16 +754,20 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tile Set 31/StaticBody2D" index="0"]
 
-position = Vector2( -0.169708, 5.59959 )
 shape = SubResource( 22 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Tile Set 33" type="Sprite" parent="." index="29"]
 
-position = Vector2( 384.893, 121.455 )
+editor/display_folded = true
+position = Vector2( 371.439, 153.582 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 722, 299, 40, 24 )
 _sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Tile Set 33" index="0"]
 

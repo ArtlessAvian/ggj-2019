@@ -106,19 +106,19 @@ tracks/1/keys = {
 [sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
-extents = Vector2( 30, 1 )
+extents = Vector2( 29.9575, 1 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 25, 27 )
+extents = Vector2( 38.1191, 23.8558 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 1024, 100 )
 
-[node name="Dog" type="KinematicBody2D"]
+[node name="Dog" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 0
