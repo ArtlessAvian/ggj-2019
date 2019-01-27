@@ -21,7 +21,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Harbor" type="TileMap" parent="." index="0"]
 
@@ -197,7 +197,6 @@ shape = SubResource( 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="8"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
