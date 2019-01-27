@@ -31,7 +31,7 @@ func _physics_process(delta):
 			vel *= 0
 		
 		vel.y += 10
-		self.move_and_slide(vel, Vector2(0, -1))
+		self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
 		return
 	
 	else:
@@ -66,7 +66,7 @@ func _physics_process(delta):
 		# Lol do it manually
 		$Sprite.frame = clamp(round(vel.y / jump_speed), -1, 1) + 5
 	
-	self.move_and_slide(vel, Vector2(0, -1))
+	self.move_and_slide(vel * self.scale.x, Vector2(0, -1))
 	if (vel.x != 0):
 		$Sprite.flip_h = vel.x < 0
 
@@ -76,9 +76,9 @@ func get_input(delta):
 		$AnimationPlayer.play("Walk")
 	
 	if Input.is_action_pressed("ui_left"):
-		vel.x -= delta * move_acc
+		vel.x -= delta * move_acc * self.scale.x
 	elif Input.is_action_pressed("ui_right"):
-		vel.x += delta * move_acc
+		vel.x += delta * move_acc * self.scale.x
 	else:
 		if (grounded and $AnimationPlayer.assigned_animation != "Stand"):
 			$AnimationPlayer.play("Stand")
