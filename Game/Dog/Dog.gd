@@ -106,7 +106,7 @@ var cat = null
 
 func _on_CatDetector_body_entered(body):
 	cat = body
-	$Raycast.enabled = true
+	$RayCast2D.enabled = true
 
 func _on_CatDetector_body_exited(body):
 	if (my_state == "Chase"):
