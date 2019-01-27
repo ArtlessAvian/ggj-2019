@@ -12,6 +12,21 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 9.57695, 0.928609 )
+
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
@@ -20,12 +35,12 @@ extents = Vector2( 10, 10 )
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 10, 16.6203 )
 
 [sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
-extents = Vector2( 9.57695, 0.928609 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=9]
 
@@ -35,12 +50,12 @@ extents = Vector2( 10, 10 )
 [sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 16.6203 )
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=11]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 19.1177, 10 )
 
 [sub_resource type="RectangleShape2D" id=12]
 
@@ -52,27 +67,12 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 19.1177, 10 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
 [node name="Buildings Tileset" type="Node2D"]
 
 [node name="Health Centre" type="Sprite" parent="." index="0"]
 
 editor/display_folded = true
-position = Vector2( 1, -2 )
+position = Vector2( -10, 10 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 80, 80, 160, 160 )
@@ -164,7 +164,7 @@ shape = SubResource( 2 )
 [node name="Pops!" type="Sprite" parent="." index="2"]
 
 editor/display_folded = true
-position = Vector2( 206.113, 18.2053 )
+position = Vector2( 190, 30 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 1008, 128, 208, 112 )
@@ -187,24 +187,24 @@ bounce = 0.0
 
 position = Vector2( 5.88354, -24.5296 )
 scale = Vector2( 8.03846, 0.730769 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Pops!/StaticBody2D" index="1"]
 
 position = Vector2( -81.1164, -22.0296 )
 scale = Vector2( 0.884616, 0.538462 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pops!/StaticBody2D" index="2"]
 
 position = Vector2( 53.3835, -38.0296 )
 scale = Vector2( 1.61539, 0.615385 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="Nyan Sushi" type="Sprite" parent="." index="3"]
 
 editor/display_folded = true
-position = Vector2( -149.507, -5.8082 )
+position = Vector2( -170, 0 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 496, 64, 112, 176 )
@@ -227,30 +227,30 @@ bounce = 0.0
 
 position = Vector2( -1.99276, 40.3082 )
 scale = Vector2( 3.26923, 0.884615 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Nyan Sushi/StaticBody2D" index="1"]
 
 position = Vector2( -50.4928, -57.1918 )
 scale = Vector2( 0.538462, 0.538461 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Nyan Sushi/StaticBody2D" index="2"]
 
 position = Vector2( -1.99276, -65.6918 )
 scale = Vector2( 4.11538, 0.807692 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Nyan Sushi/StaticBody2D" index="3"]
 
 position = Vector2( -17.9928, -78.6918 )
 scale = Vector2( 1.65385, 0.576923 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="4 Story" type="Sprite" parent="." index="4"]
 
 editor/display_folded = true
-position = Vector2( -295.303, -28.6142 )
+position = Vector2( -310, -20 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 624, 16, 112, 224 )
@@ -273,31 +273,31 @@ bounce = 0.0
 
 position = Vector2( -21.6971, 57.6142 )
 scale = Vector2( 2.86238, -5.3454 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="1"]
 
 position = Vector2( -21.6971, 10.0527 )
 scale = Vector2( 2.78287, -5.71156 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="2"]
 
 position = Vector2( -21.6971, -37.8858 )
 scale = Vector2( 2.78287, -4.96359 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="3"]
 
 position = Vector2( -8.6971, -88.8858 )
 scale = Vector2( 4.92965, -8.27264 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="4 Story/StaticBody2D" index="4"]
 
 position = Vector2( -34.1971, -102.386 )
 scale = Vector2( 1.70948, -6.10903 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="Bon Bon Cafe" type="Sprite" parent="." index="5"]
 
@@ -326,19 +326,19 @@ bounce = 0.0
 
 position = Vector2( -2.59384, -26.9119 )
 scale = Vector2( 4.92115, 0.557975 )
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Bon Bon Cafe/StaticBody2D" index="1"]
 
 position = Vector2( -42.0729, -28.9334 )
 scale = Vector2( 1.64648, 0.713476 )
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Bon Bon Cafe/StaticBody2D" index="2"]
 
 position = Vector2( -2.35025, -22.3932 )
 scale = Vector2( 6.36596, 0.210384 )
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 
 [node name="Burgr Land" type="Sprite" parent="." index="6"]
 
@@ -366,19 +366,19 @@ bounce = 0.0
 
 position = Vector2( -2.35535, -29.9899 )
 scale = Vector2( 3.24723, 0.631935 )
-shape = SubResource( 10 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Burgr Land/StaticBody2D" index="1"]
 
 position = Vector2( -37.1968, -27.7306 )
 scale = Vector2( 0.56712, 0.516781 )
-shape = SubResource( 10 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Burgr Land/StaticBody2D" index="2"]
 
 position = Vector2( -2.23649, -21.5471 )
 scale = Vector2( 4.92115, 0.201624 )
-shape = SubResource( 10 )
+shape = SubResource( 7 )
 
 [node name="Railing 1" type="Sprite" parent="." index="7"]
 
@@ -406,7 +406,7 @@ bounce = 0.0
 
 position = Vector2( -1.50001, 2.5 )
 scale = Vector2( 3.80769, 0.499999 )
-shape = SubResource( 11 )
+shape = SubResource( 8 )
 
 [node name="Railing 2" type="Sprite" parent="." index="8"]
 
@@ -434,7 +434,7 @@ bounce = 0.0
 
 position = Vector2( 1.5, 1.99999 )
 scale = Vector2( 2.73077, 0.538461 )
-shape = SubResource( 12 )
+shape = SubResource( 9 )
 
 [node name="Open Door 1" type="Sprite" parent="." index="9"]
 
@@ -462,7 +462,7 @@ bounce = 0.0
 
 position = Vector2( -1.5, -3.21865e-006 )
 scale = Vector2( 0.961538, 1.53846 )
-shape = SubResource( 13 )
+shape = SubResource( 10 )
 
 [node name="Open Door 2" type="Sprite" parent="." index="10"]
 
@@ -490,7 +490,7 @@ bounce = 0.0
 
 position = Vector2( 5.98077, -3.21865e-006 )
 scale = Vector2( 0.496471, 1.53846 )
-shape = SubResource( 3 )
+shape = SubResource( 11 )
 
 [node name="Cable Car" type="Sprite" parent="." index="11"]
 
@@ -518,7 +518,7 @@ bounce = 0.0
 
 position = Vector2( 5.50001, -11 )
 scale = Vector2( 4.88462, 0.307692 )
-shape = SubResource( 4 )
+shape = SubResource( 12 )
 
 [node name="Train Station" type="Sprite" parent="." index="12"]
 
@@ -546,6 +546,6 @@ bounce = 0.0
 
 position = Vector2( 0.999999, 27.5 )
 scale = Vector2( 6.46154, 0.423077 )
-shape = SubResource( 5 )
+shape = SubResource( 13 )
 
 
