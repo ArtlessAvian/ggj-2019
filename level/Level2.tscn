@@ -21,7 +21,7 @@ extents = Vector2( 10, 840 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 840 )
 
-[node name="Level2" type="Node2D"]
+[node name="Level2" type="Node2D" index="0"]
 
 position = Vector2( 128, -800 )
 _sections_unfolded = [ "Transform" ]
@@ -313,5 +313,7 @@ pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
+
+[connection signal="body_entered" from="ToLevel3" to="ToLevel3" method="_on_ToLevel3_body_entered"]
 
 
