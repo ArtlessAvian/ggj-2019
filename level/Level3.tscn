@@ -25,7 +25,7 @@ extents = Vector2( 10, 65.6971 )
 custom_solver_bias = 0.0
 extents = Vector2( 80, 90 )
 
-[node name="Level3" type="Node2D" index="0"]
+[node name="Level3" type="Node2D"]
 
 position = Vector2( 0, -384 )
 _sections_unfolded = [ "Transform" ]
