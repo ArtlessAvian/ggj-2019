@@ -16,7 +16,7 @@ func _ready():
 
 
 func _on_StartButton_pressed():
-	#get_tree().change_scene(
+	get_tree().change_scene("res://level/Level1-Dawn.tscn")
 	pass # replace with function body
 
 

@@ -261,7 +261,7 @@ shape = SubResource( 1 )
 
 [node name="park" type="TileMap" parent="." index="14"]
 
-position = Vector2( -623, -5 )
+position = Vector2( 0, -5 )
 scale = Vector2( 4, 4 )
 mode = 0
 tile_set = ExtResource( 7 )
@@ -279,7 +279,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -262135, 0, 0, -65527, 0, 0, 196611, 0, 0, 196622, 0, 0, 196632, 0, 0, 393202, 15, 0, 327709, 15, 0, 655345, 9, 0, 655352, 7, 0, 589857, 9, 0, 589864, 8, 0, 786420, 10, 0, 720932, 10, 0 )
+tile_data = PoolIntArray( 393202, 15, 0, 327709, 15, 0, 655345, 9, 0, 655352, 7, 0, 589857, 9, 0, 589864, 8, 0, 786420, 10, 0, 720932, 10, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Dogs" type="Node2D" parent="." index="15"]
@@ -313,5 +313,7 @@ pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
+
+[connection signal="body_entered" from="ToLevel3" to="ToLevel3" method="_on_ToLevel3_body_entered"]
 
 
